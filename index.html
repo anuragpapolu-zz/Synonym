@@ -8,8 +8,12 @@ $.ajax({
          }
          url:myUrl,
          dataType:'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json',
-         error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown); }
-}, function( data ) {  
-	alert( data );
+         error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown);
+}).done(function( data ) {    
+	if ( console && console.log ) {      
+		console.log( "Sample of data:", data.slice( 0, 100 ) );    
+		
+	}  
+	
 });
 </script>
