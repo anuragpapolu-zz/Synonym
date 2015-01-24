@@ -1,6 +1,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-$.get( " http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json ", function( data ) {  
+$.ajax({
+         type:'get',
+         beforeSend: function(xhr) {
+             var auth = // authentication; 
+             xhr.setRequestHeader("Authorization", "Basic " + auth);
+         }
+         url:myUrl,
+         dataType:'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json',
+         error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown); }
+}, function( data ) {  
 	alert( data );
 });
 </script>
