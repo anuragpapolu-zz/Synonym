@@ -5,9 +5,9 @@ $.ajax({
          beforeSend: function(xhr) {
              var auth = // authentication; 
              xhr.setRequestHeader("Authorization", "Basic " + auth);
-         }
-         url:myUrl,
-         dataType:'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json',
+         },
+         url:'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json',
+         dataType: json,
          error: function(xhr, textStatus, errorThrown) { console.log(textStatus, errorThrown);
 }).done(function( data ) {    
 	if ( console && console.log ) {      
