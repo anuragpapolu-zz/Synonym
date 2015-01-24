@@ -45,3 +45,6 @@ function makeCorsRequest() {
   xhr.send();
 }
 makeCorsRequest();
+$("textarea").bind('input propertychange', function(){
+  alert($(this).val());
+});
