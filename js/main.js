@@ -1,4 +1,3 @@
-
 function createCORSRequest(method, url) {
   var xhr = new XMLHttpRequest();
   if ("withCredentials" in xhr) {
@@ -25,9 +24,9 @@ function getTitle(text) {
 function makeCorsRequest(word) {
   var results = [];
   $.each(word, function (index, value) {
-    var url = 'http://www.dictionaryapi.com/api/v1/references/thesaurus/xml/'+value+'?key=f10db1b0-2697-4971-9302-863a3d90f4c1';
+    var url = 'php/get.php?word='+value;
 
-    var xhr = createCORSRequest('GET', url);
+    var xhr = createCORSRequest('POST', url);
     if (!xhr) {
       console.log('CORS not supported');
       return;
