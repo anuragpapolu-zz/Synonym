@@ -32,7 +32,8 @@ function makeCorsRequest(word) {
       random.push( words[rn]);
       words.splice(rn, 1);
   }
-  $(".wrapper").text().split(" ").each(function(index, value){
+  var wordarray = $(".wrapper").text().split(" ");
+  $.each("wordarray", function(index, value){
     if(isInArray(value, random) > -1) {
       random.splice([isInArray(value, random)]);
       value = "<span>"+value+"</span>";
