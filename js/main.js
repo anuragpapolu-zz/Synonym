@@ -62,7 +62,7 @@ document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
-    $("#results").html('<ul class="list-group"></ul>');
+    $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
     var xhr = createCORSRequest('GET', url);
@@ -75,7 +75,7 @@ $(document).on('click', '.wrapper a', function(){
       var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
       $.each(text, function(idx, obj) {
         $.each(obj.syn, function(index, wordobject){
-          $("#results ul").append('<li class="list-group-item">'+wordobject+'</li>');
+          $("#results ul").append('<a class="list-group-item">'+wordobject+'</a>');
         });
       });
     };
