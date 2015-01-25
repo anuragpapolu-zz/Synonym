@@ -76,7 +76,7 @@ $(document).on('click', '.wrapper a', function(){
       var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
       $.each(text, function(idx, obj) {
         $.each(obj.syn, function(index, wordobject){
-          $("#results div").append('<a class="list-group-item">'+wordobject+'</a>');
+          $("#results div").append('<a href="#'+value+'" class="list-group-item">'+wordobject+'</a>');
         });
       });
     };
@@ -84,4 +84,9 @@ $(document).on('click', '.wrapper a', function(){
       console.log('Woops, there was an error making the request.');
     };
     xhr.send();
+ });
+$(document).on('click', '#results div', function(){ 
+    $("#results").html('<div class="list-group"></div>');
+    var value = $(this).attr("href").replace("#","");
+    $(".wrapper").text().replace(value, wordobject);
  });
