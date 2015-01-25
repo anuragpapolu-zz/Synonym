@@ -60,9 +60,9 @@ function makeCorsRequest() {
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
-  $("#placehold").remove();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
+    alert("YEAG");
     $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
@@ -86,7 +86,6 @@ $(document).on('click', '.wrapper a', function(){
     xhr.send();
  });
 $(document).on('click', '#results a', function(){ 
-    $("#results").slideUp();
     var value = $(this).attr("href").replace("#","");
     var replacement = $(this).text();
     $('.wrapper a[href="#'+value+'"]').text(replacement);
