@@ -74,9 +74,9 @@ $(document).on('click', '.wrapper a', function(){
       var text = JSON.stringify(eval("(" + xhr.responseText + ")"));
       var synonyms = [];
       $.each(text, function(i, item) {
-          synonyms.push(obj.syn);
-          synonyms.push(obj.rel);
-          synonyms.push(obj.sim);
+          synonyms.push(item.syn);
+          synonyms.push(item.rel);
+          synonyms.push(item.sim);
       });​
 
       $("#results").html('<ul class="list-group"><li class="list-group-item">'+synonyms+'</li></ul>');
