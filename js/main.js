@@ -35,6 +35,7 @@ function makeCorsRequest(word) {
       random.push(value);
     }
   });
+  alert(random);
   var wordarray = $(".wrapper").text().split(" ");
   $.each(wordarray, function(index, value){
     if(isInArray(value, random) > -1) {
