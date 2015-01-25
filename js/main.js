@@ -31,13 +31,13 @@ if (!xhr) {
 xhr.onload = function() {
   var text = xhr.responseText;
   var title = getTitle(text);
-  console.log(title);
+  $("#results").text(title);
 };
 xhr.onerror = function() {
   console.log('Woops, there was an error making the request.');
 };
 xhr.send();
 }
-$(".wrapper").bind('input propertychange', function(){
+$(".btn").click(function(){
   makeCorsRequest($(this).text());
 });
