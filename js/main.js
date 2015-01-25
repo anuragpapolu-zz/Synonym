@@ -17,14 +17,13 @@ function createCORSRequest(method, url) {
 
 // Helper method to parse the title tag from the response.
 function getTitle(text) {
-  var list = text
+  var list = eval('(' + text+ ')');
   return list;
 }
 
 // Make the actual CORS request.
 function makeCorsRequest(word) {
   var results = [];
-  word = eval('(' + word + ')');
   $.each(word, function (index, value) {
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
 
@@ -51,5 +50,5 @@ function makeCorsRequest(word) {
 }
 
 $(".wrapper").bind('input propertychange', function(){
-  makeCorsRequest($(this).text());
+  makeCorsRequest($(this).text().split(" "));
 });
