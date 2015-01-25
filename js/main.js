@@ -35,7 +35,7 @@ function makeCorsRequest(word) {
   xhr.onload = function() {
     var text = xhr.responseText;
     var title = getTitle(text);
-    alert(title);
+    console.log(title);
   };
 
   xhr.onerror = function() {
@@ -46,5 +46,5 @@ function makeCorsRequest(word) {
 }
 
 $("textarea").bind('input propertychange', function(){
-  console.log(makeCorsRequest($(this).val()));
+  makeCorsRequest($(this).val());
 });
