@@ -34,12 +34,18 @@ function makeCorsRequest() {
   for (i = 0; i < word.length; ++i) {
     if(isInArray(word[i], bad_words) > -1) {
       word.splice(i,1);
-    } else if (!word[i].trim()) {
+    } else if (word[i] == "") {
+      word.splice(i,1);
+    }
+  }
+  for (i = 0; i < word.length; ++i) {
+    if(isInArray(word[i], bad_words) > -1) {
+      word.splice(i,1);
+    } else if (word[i] == "") {
       word.splice(i,1);
     }
   }
   console.log(word);
-
 }
 $(".btn").click(function(){
   makeCorsRequest();
