@@ -16,7 +16,7 @@ function createCORSRequest(method, url) {
 
 // Helper method to parse the title tag from the response.
 function getTitle(text) {
-  var list = eval('(' + text+ ')');
+  var list = text;
   return list;
 }
 
