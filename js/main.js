@@ -72,7 +72,7 @@ $(document).on('click', '.wrapper a', function(){
     // Response handlers.
     xhr.onload = function() {
       var text = xhr.responseText;
-      $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>';
+      $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>');
     };
     xhr.onerror = function() {
       console.log('Woops, there was an error making the request.');
