@@ -38,9 +38,9 @@ function makeCorsRequest(word) {
       alert("DS");
       random.splice([isInArray(value, random)]);
       value = "<span>"+value+"</span>";
-      
+      wordarray.push(value);
     }
-    wordarray.push(value);
+    
   });
   $(".wrapper").html(wordarray);
 
