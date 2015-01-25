@@ -73,7 +73,7 @@ $(document).on('click', '.wrapper a', function(){
     xhr.onload = function() {
       var text = JSON.stringify(eval("(" + xhr.responseText + ")"));
       var synonyms = [];
-      $.each(text, function(i, item) {
+      $.each(text, function(i, item)) {
           synonyms.push(item.syn);
           synonyms.push(item.rel);
           synonyms.push(item.sim);
