@@ -25,7 +25,7 @@ function getTitle(text) {
 function makeCorsRequest(word) {
   var results = [];
   $.each(word, function (index, value) {
-    var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
+    var url = 'http://www.dictionaryapi.com/api/v1/references/thesaurus/xml/'+value+'?key=f10db1b0-2697-4971-9302-863a3d90f4c1';
 
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {
