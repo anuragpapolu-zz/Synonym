@@ -37,10 +37,11 @@ function makeCorsRequest(word) {
     if(isInArray(value, random) > -1) {
       alert("DS");
       random.splice([isInArray(value, random)]);
-      wordarray.splice(index);
       value = "<span>"+value+"</span>";
-      wordarray.push(value);
+      
     }
+      wordarray.splice(index);
+      wordarray.push(value);
     
   });
   $(".wrapper").html(wordarray);
