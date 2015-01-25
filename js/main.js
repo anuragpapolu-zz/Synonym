@@ -46,6 +46,17 @@ function makeCorsRequest() {
     }
   }
   console.log(word);
+  var wordarray = $(".wrapper").text().split(" ");
+  $.each(wordarray, function(index, value){
+    if(isInArray(value, word) > -1) {
+      wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
+      word.splice(isInArray(value, word),1);
+
+    } 
+
+    
+  });
+  $(".wrapper").html(wordarray.join(" "));
 }
 $(".btn").click(function(){
   makeCorsRequest();
