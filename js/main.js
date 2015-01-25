@@ -22,7 +22,7 @@ function getTitle(text) {
 }
 
 // Make the actual CORS request.
-function makeCorsRequest() {
+function makeCorsRequest(word) {
   // All HTML5 Rocks properties support CORS.
 
 
