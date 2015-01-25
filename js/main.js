@@ -21,9 +21,9 @@ function getTitle(text) {
 }
 
 // Make the actual CORS request.
-function makeCorsRequest() {
+function makeCorsRequest(word) {
   // All HTML5 Rocks properties support CORS.
-  var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/word/json';
+  var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+word+'/json';
 
   var xhr = createCORSRequest('GET', url);
   if (!xhr) {
@@ -44,7 +44,7 @@ function makeCorsRequest() {
 
   xhr.send();
 }
-makeCorsRequest();
+
 $("textarea").bind('input propertychange', function(){
-  alert($(this).val());
+  alert(makeCorsRequest($(this).val()));
 });
