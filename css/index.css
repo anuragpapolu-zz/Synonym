@@ -2,6 +2,7 @@ body,html{
   height:100%;
   background: url(http://subtlepatterns.com/patterns/footer_lodyas.png);
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 .col-md-8 {
   height: 100%;
@@ -22,8 +23,13 @@ body,html{
   outline: 0;
   padding: 20px;
 }
+.logo {
+  color: #eee;
+  font-family: 'Raleway', sans-serif;
+}
 .col-md-4 {
   padding-right: 0px;
   padding-left: 0px;
   overflow-y: scroll;
+  height: 100%;
 }
