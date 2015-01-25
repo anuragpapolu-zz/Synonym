@@ -9,8 +9,7 @@ function makeCorsRequest(word) {
       url: "php/get.php",  
       data: { word: word }
     }).done(function( msg ) { 
-      var title = getTitle(msg);
-      results.push(title);
+      results.push(msg);
   
     });
     
