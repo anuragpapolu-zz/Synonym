@@ -52,8 +52,9 @@ $(".btn").click(function(){
       list = result.response[key].list;
       output += list.synonyms+"<br>";
     }
-    if (output)
+    if (output) {
       document.getElementById("results").innerHTML = output;
+    }
   }
 
 });
