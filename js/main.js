@@ -7,7 +7,8 @@ function makeCorsRequest(word) {
     $.ajax({  
       type: "GET",  
       url: "php/get.php",  
-      data: { word: word }
+      data: { word: word },
+      dataType : 'json',
     }).done(function( msg ) { 
       results.push(msg);
   

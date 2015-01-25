@@ -9,5 +9,5 @@ function grab_xml_definition ($word, $ref, $key)
 
 $xdef = grab_xml_definition($_GET['word'], "thesaurus", "f10db1b0-2697-4971-9302-863a3d90f4c1");
 
-echo $xdef;
+echo json_encode($xdef);
 ?>
