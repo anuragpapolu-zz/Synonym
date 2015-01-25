@@ -9,11 +9,10 @@ function getTitle(text) {
 function makeCorsRequest(word) {
   var results = [];
   $.each(word, function (index, value) {
-    var url = 'php/get.php?word='+value;
 
     $.ajax({  
       type: "POST",  
-      url: "some.php",  
+      url: "php/get.php",  
       data: { word: word }
     }).done(function( msg ) { 
       var title = getTitle(msg);
