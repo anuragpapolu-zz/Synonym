@@ -62,7 +62,6 @@ document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
-    alert("YEAG");
     $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
