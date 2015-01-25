@@ -30,7 +30,7 @@ function makeCorsRequest(word) {
   $.each(words, function(index, value){
     if(isInArray(value, bad_words) > -1) {
       jQuery.noop();
-
+      alert(value);
     } else {
       random.push(value);
     }
