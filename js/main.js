@@ -40,8 +40,8 @@ function makeCorsRequest() {
     }
 
   console.log(word);
-  while(word.length>0) {
-    var wordarray = $(".wrapper").text().split(" ");
+    var newtext = $(".wrapper").text();
+    var wordarray =  $.trim(newtext.replaceAll(',', ' ').replaceAll('"', ' ').replaceAll('!', ' ').replace('.', ' ').replace('?', ' ')).split(" ");
 
     $.each(wordarray, function(index, value){
       if(isInArray(value, word) > -1) {
@@ -52,8 +52,7 @@ function makeCorsRequest() {
 
       
     });
-  }
-  $(".wrapper").html(wordarray.join(" "));
+    $(".wrapper").html(wordarray.join(" "));
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
