@@ -60,6 +60,7 @@ function makeCorsRequest() {
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
+  $("#placehold").remove();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
     $("#results").html('<div class="list-group"></div>');
