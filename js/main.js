@@ -31,7 +31,7 @@ function makeCorsRequest(word) {
     if(isInArray(value, bad_words) > -1) {
       jQuery.noop();
     } else {
-      random.push(value);
+      random.push(index);
     }
   });
   var wordarray = $(".wrapper").text().split(" ");
@@ -39,7 +39,7 @@ function makeCorsRequest(word) {
   $.each(wordarray, function(index, value){
     if(isInArray(value, random) > -1) {
       wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
-      random.splice([isInArray(index, random)]);
+      random.splice([isInArray(value, random)]);
 
     } 
 
