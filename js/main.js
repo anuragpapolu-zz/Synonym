@@ -1,9 +1,3 @@
-function getTitle(text) {
-
-  var list = text;
-  alert(list);
-  return list;
-}
 
 // Make the actual CORS request.
 function makeCorsRequest(word) {
@@ -11,7 +5,7 @@ function makeCorsRequest(word) {
   $.each(word, function (index, value) {
 
     $.ajax({  
-      type: "POST",  
+      type: "GET",  
       url: "php/get.php",  
       data: { word: word }
     }).done(function( msg ) { 
