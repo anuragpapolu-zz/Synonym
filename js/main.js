@@ -86,7 +86,7 @@ $(document).on('click', '.wrapper a', function(){
     xhr.send();
  });
 $(document).on('click', '#results a', function(){ 
-    
+    $("#results").slideUp();
     var value = $(this).attr("href").replace("#","");
     var replacement = $(this).text();
     $('.wrapper a[href="#'+value+'"]').text(replacement);
