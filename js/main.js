@@ -58,9 +58,14 @@ function makeCorsRequest() {
   $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
 
 }
-document.getElementById("edit").addEventListener("input", function() {
-  makeCorsRequest();
-}, false);
+$('body').keyup(function(e){
+
+   if(e.keyCode == 32){
+       // user has pressed space
+      makeCorsRequest();
+
+   }
+});
 $(document).on('click', '.wrapper a', function(){ 
     $("#results").html('<ul class="list-group"></ul>');
     var value = $(this).attr("href").replace("#","");
