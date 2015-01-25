@@ -42,7 +42,7 @@ function makeCorsRequest(word) {
 
     
   });
-  $(".wrapper").html(wordarray.toString());
+  $(".wrapper").html(wordarray.join(" "));
 
 }
 $(".btn").click(function(){
