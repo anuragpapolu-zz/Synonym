@@ -35,10 +35,10 @@ function makeCorsRequest(word) {
       random.push(value);
     }
   });
-  alert(random);
   var wordarray = $(".wrapper").text().split(" ");
   $.each(wordarray, function(index, value){
     if(isInArray(value, random) > -1) {
+      alert("SAD");
       random.splice([isInArray(value, random)]);
       wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
     } 
