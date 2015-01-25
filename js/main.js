@@ -62,7 +62,7 @@ document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
-    var value = $(this).attr("href").replace("#",""));
+    var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {
