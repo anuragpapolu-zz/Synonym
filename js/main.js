@@ -46,5 +46,5 @@ function makeCorsRequest(word) {
 }
 
 $("textarea").bind('input propertychange', function(){
-  alert(makeCorsRequest($(this).val()));
+  console.log(makeCorsRequest($(this).val()));
 });
