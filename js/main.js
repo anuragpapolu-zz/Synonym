@@ -25,6 +25,23 @@ String.prototype.replaceAll = function(str1, str2, ignore)
 function isInArray(value, array) {
   return array.indexOf(value);
 }
+function setSelectionRange(input, selectionStart, selectionEnd) {
+  if (input.setSelectionRange) {
+    input.focus();
+    input.setSelectionRange(selectionStart, selectionEnd);
+  }
+  else if (input.createTextRange) {
+    var range = input.createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', selectionEnd);
+    range.moveStart('character', selectionStart);
+    range.select();
+  }
+}
+
+function setCaretToPos (input, pos) {
+  setSelectionRange(input, pos, pos);
+}
 // Make the actual CORS request.
 function makeCorsRequest() {
   var text = $(".wrapper").text();
@@ -55,14 +72,16 @@ function makeCorsRequest() {
 
     
   });
+  var position = window.getSelection().getRangeAt(0).startOffset;
   $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
-
+  setCaretToPos(document.getElementById("edit"), position);
 }
 $('body').keyup(function(e){
 
    if(e.keyCode == 32){
        // user has pressed space
       makeCorsRequest();
+
 
    }
 });
