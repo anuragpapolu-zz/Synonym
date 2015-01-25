@@ -18,7 +18,7 @@ function createCORSRequest(method, url) {
 // Helper method to parse the title tag from the response.
 function getTitle(text) {
   var list = eval('(' + text+ ')');
-  return list[0];
+  return list;
 }
 
 // Make the actual CORS request.
