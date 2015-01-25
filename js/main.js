@@ -38,21 +38,24 @@ function makeCorsRequest() {
         word.splice(i,1);
       }
     }
+    for (i = 0; i < word.length; ++i) {
+      if(isInArray(word[i], bad_words) > -1) {
+        word.splice(i,1);
+      } else if (word[i] == "") {
+        word.splice(i,1);
+      }
+    }
+  var wordarray = $(".wrapper").text().split(" ");
+  $.each(wordarray, function(index, value){
+    if(isInArray(value, word) > -1) {
+      wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
+      word.splice(isInArray(value, word),1);
 
-  console.log(word);
-    var newtext = $(".wrapper").text();
-    var wordarray =  $.trim(newtext.replaceAll(',', ' ').replaceAll('"', ' ').replaceAll('!', ' ').replace('.', ' ').replace('?', ' ')).split(" ");
+    } 
 
-    $.each(wordarray, function(index, value){
-      if(isInArray(value, word) > -1) {
-        wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
-        word.splice(isInArray(value, word),1);
-
-      } 
-
-      
-    });
-    $(".wrapper").html(wordarray.join(" "));
+    
+  });
+  $(".wrapper").html(wordarray.join(" "));
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
