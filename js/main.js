@@ -71,9 +71,15 @@ $(document).on('click', '.wrapper a', function(){
     }
     // Response handlers.
     xhr.onload = function() {
-      var text = xhr.responseText;
-      console.log(text);
-      $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>');
+      var text = JSON.stringify(eval("(" + xhr.responseText + ")"));
+      var synonyms = [];
+      $.each(text, function(i, item) {
+          synonyms.push(obj.syn);
+          synonyms.push(obj.rel);
+          synonyms.push(obj.sim);
+      });​
+
+      $("#results").html('<ul class="list-group"><li class="list-group-item">'+synonyms+'</li></ul>');
     };
     xhr.onerror = function() {
       console.log('Woops, there was an error making the request.');
