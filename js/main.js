@@ -72,6 +72,7 @@ $(document).on('click', '.wrapper a', function(){
     // Response handlers.
     xhr.onload = function() {
       var text = xhr.responseText;
+      console.log(text);
       $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>');
     };
     xhr.onerror = function() {
