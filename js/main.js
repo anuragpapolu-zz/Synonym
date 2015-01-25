@@ -62,5 +62,5 @@ document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
-      $("#results").text($(this).attr("id").replace("#",""));
+      $("#results").text($(this).attr("href").replace("#",""));
  });
