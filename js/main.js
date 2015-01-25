@@ -27,12 +27,10 @@ function makeCorsRequest(word) {
   var bad_words = ["all", "another", "and", "any", "anybody", "anyone", "anything", "a", "both", "but", "each", "either", "everybody", "everyone", "everything", "few", "for", "he", "her", "herself", "hers", "him", "himself", "his","how", "I", "it", "itself", "its", "it’s", "many", "me", "mine", "more", "most", "much", "myself", "neither", "no one", "nobody", "none", "nothing","nor", "one", "one another","or", "other", "others", "ours", "ourselves", "several", "she", "so", "some", "somebody", "someone", "something", "that", "their",  "theirs", "them", "themselves", "these", "this", "they", "those", "to", "us", "we", "what", "whatever", "when", "which", "whichever", "who", "whoever", "whom", "whomever", "whose", "you", "your", "yours", "yourself", "yourselves", "yet", "back", "in", "the", "of", "our", "ours", "just", "on", "as","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety","hundred","thousand","million","billion","trillion","million"];
   $.each(word, function(index, value){
     if(isInArray(value, bad_words) > -1) {
-      alert(value+ " is a bad word");
-    } else {
-      alert(value + " isn't a bad word");
-    }
+      word.splice(index);
+    } 
   });
-  console.log(words);
+  console.log(word);
   var wordarray = $(".wrapper").text().split(" ");
   $.each(wordarray, function(index, value){
     if(isInArray(value, words) > -1) {
