@@ -3,18 +3,19 @@ body,html{
   background: url(http://subtlepatterns.com/patterns/footer_lodyas.png);
   width: 100%;
 }
-.col-md-4 {
+.col-md-8 {
   height: 100%;
+  background: #eee;
 }
 .container {
   height: 100%;
+  width: 100%;
 }
 .wrapper{
-  margin-top: 5px;
+  margin-top: 10px;
   min-width: 100%;
   min-height: 90%;
-  background: #eee;
-  border-radius: 25px;
+  
   padding: 20px;
 }
 
