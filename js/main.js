@@ -43,7 +43,7 @@ function makeCorsRequest(word) {
 }
 $(".btn").click(function(){
   var s = document.createElement("script");
-  s.src = "http://thesaurus.altervista.org/service.php?word=peace&language=en_US&output=json&key=XPezFPtm1AQYG9WCZ6rs&callback=process"; // NOTE: replace test_only with your own KEY
+  s.src = "http://thesaurus.altervista.org/service.php?word=peace&language=en_US&output=json&key=XPezFPtm1AQYG9WCZ6rs"; // NOTE: replace test_only with your own KEY
   document.getElementsByTagName("head")[0].appendChild(s);
 
   function process(result) {
