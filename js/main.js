@@ -55,7 +55,8 @@ function makeCorsRequest() {
 
     
   });
-  $(".wrapper").html(wordarray.join(" "));
+  $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
+
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
