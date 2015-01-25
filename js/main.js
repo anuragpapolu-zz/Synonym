@@ -23,27 +23,31 @@ function getTitle(text) {
 
 // Make the actual CORS request.
 function makeCorsRequest(word) {
-  // All HTML5 Rocks properties support CORS.
-  var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+word+'/json';
+  var results = [];
+  $.each(word, function (index, value) {
+    var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
 
-  var xhr = createCORSRequest('GET', url);
-  if (!xhr) {
-    console.log('CORS not supported');
-    return;
-  }
+    var xhr = createCORSRequest('GET', url);
+    if (!xhr) {
+      console.log('CORS not supported');
+      return;
+    }
 
-  // Response handlers.
-  xhr.onload = function() {
-    var text = xhr.responseText;
-    var title = getTitle(text);
-    console.log(title);
-  };
+    // Response handlers.
+    xhr.onload = function() {
+      var text = xhr.responseText;
+      var title = getTitle(text);
+      essay.push(title);
+      
+    };
 
-  xhr.onerror = function() {
-    console.log('Woops, there was an error making the request.');
-  };
+    xhr.onerror = function() {
+      console.log('Woops, there was an error making the request.');
+    };
 
-  xhr.send();
+    xhr.send();
+  });
+  $("#results").text(essay);
 }
 
 $(".wrapper").bind('input propertychange', function(){
