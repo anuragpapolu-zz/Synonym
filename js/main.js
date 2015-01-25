@@ -28,7 +28,10 @@ function makeCorsRequest() {
   $.each(word, function(index, value){
     if(isInArray(value, bad_words) > -1) {
       word.splice(index);
-    } 
+      alert(value+ " is bad")
+    } else {
+      alert(value + " fine");
+    }
   });
   console.log(word);
 
