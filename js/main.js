@@ -31,7 +31,7 @@ if (!xhr) {
 xhr.onload = function() {
   var text = xhr.responseText;
   var title = getTitle(text);
-  $("#results").text(title);
+  console.log(title);
 };
 xhr.onerror = function() {
   console.log('Woops, there was an error making the request.');
