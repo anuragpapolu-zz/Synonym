@@ -22,7 +22,8 @@ body,html{
   min-height: 90%;
   outline: 0;
   padding: 20px;
-  background: url(http://subtlepatterns.com/patterns/debut_light.png);
+  border-radius: 5px;
+  background: url(http://subtlepatterns.com/patterns/linedpaper.png);
 }
 .logo {
   color: #fff;
