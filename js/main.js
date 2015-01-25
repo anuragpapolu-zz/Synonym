@@ -59,9 +59,10 @@ function makeCorsRequest() {
   });
   $(".wrapper").html(wordarray.join(" "));
 }
-$(".btn").click(function(){
+document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
-});
+}, false);
+
 $('.wrapper').on('click', 'a', function(){
   alert($(this).id().replace("#",""));
 });
