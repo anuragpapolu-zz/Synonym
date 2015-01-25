@@ -42,7 +42,22 @@ function setSelectionRange(input, selectionStart, selectionEnd) {
 function setCaretToPos (input, pos) {
   setSelectionRange(input, pos, pos);
 }
-// Make the actual CORS request.
+(function ($, undefined) {
+    $.fn.getCursorPosition = function() {
+        var el = $(this).get(0);
+        var pos = 0;
+        if('selectionStart' in el) {
+            pos = el.selectionStart;
+        } else if('selection' in document) {
+            el.focus();
+            var Sel = document.selection.createRange();
+            var SelLength = document.selection.createRange().text.length;
+            Sel.moveStart('character', -el.value.length);
+            pos = Sel.text.length - SelLength;
+        }
+        return pos;
+    }
+})(jQuery); 
 function makeCorsRequest() {
   var text = $(".wrapper").val();
   var word = $.trim(text.replaceAll(',', ' , ').replaceAll('"', ' " ').replaceAll('!', ' ! ').replace('.', ' . ').replace('?', ' ? ')).split(" ");
@@ -78,7 +93,7 @@ $('body').keyup(function(e){
 
    if(e.keyCode == 32){
        // user has pressed space
-      var position = window.getSelection().getRangeAt(0).startOffset;
+      var position =  $("#edit").getCursorPosition();
 
       makeCorsRequest();
       setCaretToPos(document.getElementById("edit"), position);
