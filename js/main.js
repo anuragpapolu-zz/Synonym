@@ -89,5 +89,5 @@ $(document).on('click', '#results a', function(){
     $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var replacement = $(this).text();
-    $(".wrapper").text().replace(value, wordobject);
+    $(".wrapper").text().replace(value, replacement);
  });
