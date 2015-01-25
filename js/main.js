@@ -28,7 +28,7 @@ function makeCorsRequest(word) {
 
   var results = [];
   $.each(word, function (index, value) {
-    var url = "http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/"+word+"/json/";
+    var url = "http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/"+value+"/json/";
     var xhr = createCORSRequest('GET', url);
     if (!xhr) {
       alert('CORS not supported');
