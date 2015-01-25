@@ -62,5 +62,20 @@ document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
-      $("#results").text($(this).attr("href").replace("#",""));
+    var value = $(this).attr("href").replace("#",""));
+    var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
+    var xhr = createCORSRequest('GET', url);
+    if (!xhr) {
+      console.log('CORS not supported');
+      return;
+    }
+    // Response handlers.
+    xhr.onload = function() {
+      var text = xhr.responseText;
+      $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>';
+    };
+    xhr.onerror = function() {
+      console.log('Woops, there was an error making the request.');
+    };
+    xhr.send();
  });
