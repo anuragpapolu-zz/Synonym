@@ -17,7 +17,8 @@ function createCORSRequest(method, url) {
 
 // Helper method to parse the title tag from the response.
 function getTitle(text) {
-  return JSON.stringify(eval("(" + text + ")"));
+  var list = JSON.stringify(eval("(" + text + ")"));
+  return list[0];
 }
 
 // Make the actual CORS request.
@@ -27,7 +28,7 @@ function makeCorsRequest(word) {
 
   var xhr = createCORSRequest('GET', url);
   if (!xhr) {
-    alert('CORS not supported');
+    console.log('CORS not supported');
     return;
   }
 
@@ -39,7 +40,7 @@ function makeCorsRequest(word) {
   };
 
   xhr.onerror = function() {
-    alert('Woops, there was an error making the request.');
+    console.log('Woops, there was an error making the request.');
   };
 
   xhr.send();
