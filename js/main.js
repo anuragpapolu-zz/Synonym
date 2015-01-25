@@ -31,17 +31,7 @@ function makeCorsRequest(word) {
     } 
   });
   console.log(word);
-  var wordarray = $(".wrapper").text().split(" ");
-  $.each(wordarray, function(index, value){
-    if(isInArray(value, words) > -1) {
-      wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
-      words.splice([isInArray(value, words)]);
 
-    } 
-
-    
-  });
-  $(".wrapper").html(wordarray.join(" "));
 
 }
 $(".btn").click(function(){
