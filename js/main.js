@@ -38,9 +38,11 @@ function makeCorsRequest(word) {
     if(isInArray(value, random) > -1) {
       random.splice([isInArray(value, random)]);
       value = "<span>"+value+"</span>";
+      
     }
+    wordarray.push(value);
   });
-
+  $(".wrapper").html(wordarray);
 
 }
 $(".btn").click(function(){
