@@ -34,7 +34,7 @@ function makeCorsRequest() {
   for (i = 0; i < word.length; ++i) {
     if(isInArray(word[i], bad_words) > -1) {
       word.splice(i,1);
-    } else if (word[i] == "") {
+    } else if (!word[i].trim()) {
       word.splice(i,1);
     }
   }
