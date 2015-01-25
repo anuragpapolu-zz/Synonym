@@ -61,6 +61,6 @@ function makeCorsRequest() {
 $(".btn").click(function(){
   makeCorsRequest();
 });
-$("#dataTable tbody tr").on("click", function(event){
+$(".wrapper a").on("click", function(event){
   alert($(this).id().replace("#",""));
 });
