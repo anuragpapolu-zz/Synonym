@@ -90,6 +90,7 @@ $(document).on('click', '#results a', function(){
     var value = $(this).attr("href").replace("#","");
     var replacement = $(this).text();
     $('.wrapper a[href="#'+value+'"]').text(replacement);
+    $('.wrapper a[href="#'+value+'"]').removeClass("label-warning").addClass("label-success");
     $('.wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
     $("#results").html('<div class="list-group"></div>');
  });
