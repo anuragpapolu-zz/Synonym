@@ -45,6 +45,7 @@ function makeCorsRequest() {
       word.splice(i,1);
     }
   }
+
   console.log(word);
   var wordarray = $(".wrapper").text().split(" ");
   $.each(wordarray, function(index, value){
@@ -61,6 +62,6 @@ function makeCorsRequest() {
 $(".btn").click(function(){
   makeCorsRequest();
 });
-$(".wrapper a").on("click", function(event){
+$('.wrapper').on('click', 'a', function(){
   alert($(this).id().replace("#",""));
 });
