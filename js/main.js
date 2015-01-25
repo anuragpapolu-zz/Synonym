@@ -72,16 +72,16 @@ function makeCorsRequest() {
 
     
   });
-  var position = window.getSelection().getRangeAt(0).startOffset;
-  alert(position);
   $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
-  setCaretToPos(document.getElementById("edit"), position);
 }
 $('body').keyup(function(e){
 
    if(e.keyCode == 32){
        // user has pressed space
+      var position = window.getSelection().getRangeAt(0).startOffset;
+
       makeCorsRequest();
+    setCaretToPos(document.getElementById("edit"), position);
 
 
    }
