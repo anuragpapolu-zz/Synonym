@@ -22,9 +22,10 @@ body,html{
   min-height: 90%;
   outline: 0;
   padding: 20px;
+  background: url(http://subtlepatterns.com/patterns/debut_light.png);
 }
 .logo {
-  color: #7f8c8d;
+  color: #fff;
   text-align: center;
 }
 .col-md-4 {
