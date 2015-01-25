@@ -42,5 +42,18 @@ function makeCorsRequest(word) {
 
 }
 $(".btn").click(function(){
-  makeCorsRequest($(".wrapper").text().split(" "));
+  var s = document.createElement("script");
+  s.src = "http://thesaurus.altervista.org/service.php?word=peace&language=en_US&output=json&key=test_only&callback=process"; // NOTE: replace test_only with your own KEY
+  document.getElementsByTagName("head")[0].appendChild(s);
+
+  function process(result) {
+    output = "";
+    for (key in result.response) {
+      list = result.response[key].list;
+      output += list.synonyms+"<br>";
+    }
+    if (output)
+      document.getElementById("results").innerHTML = output;
+  }
+
 });
