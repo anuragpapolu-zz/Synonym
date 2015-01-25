@@ -26,8 +26,8 @@ function makeCorsRequest(word) {
     $.ajax({
 
       type: 'GET',
-      url: 'http://updates.html5rocks.com',
-      contentType: 'text/plain',
+      url: url,
+      contentType: 'json',
       xhrFields: {
         // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
         // This can be used to set the 'withCredentials' property.
