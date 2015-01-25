@@ -47,5 +47,5 @@ function makeCorsRequest(word) {
 
 }
 $(".btn").click(function(){
-  makeCorsRequest($(".wrapper").text());
+  makeCorsRequest($(".wrapper").text().split(" "));
 });
