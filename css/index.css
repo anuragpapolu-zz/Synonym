@@ -25,7 +25,8 @@ body,html{
 }
 .logo {
   color: #eee;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lobster Two', cursive;
+  text-align: center;
 }
 .col-md-4 {
   padding-right: 0px;
