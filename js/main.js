@@ -35,9 +35,8 @@ function makeCorsRequest(word) {
   var wordarray = $(".wrapper").text().split(" ");
   $.each(wordarray, function(index, value){
     if(isInArray(value, random) > -1) {
-      alert("DS");
       random.splice([isInArray(value, random)]);
-      wordarray[index] = "<span class='label label-warning'>"+value+"</span>";
+      wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
     } 
 
     
