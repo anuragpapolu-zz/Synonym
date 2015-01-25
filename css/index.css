@@ -3,10 +3,17 @@ body,html{
   background-color: #3498db;
   width: 100%;
 }
+.col-md-4 {
+  height: 100%;
+}
+.container {
+  height: 100%;
+}
 .wrapper{
   min-width: 100%;
   min-height: 100%;
   background: #eee;
   border-radius: 25px;
+  padding: 20px;
 }
 
