@@ -73,6 +73,7 @@ function makeCorsRequest() {
     
   });
   var position = window.getSelection().getRangeAt(0).startOffset;
+  alert(position);
   $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
   setCaretToPos(document.getElementById("edit"), position);
 }
