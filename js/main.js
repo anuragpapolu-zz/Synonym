@@ -75,7 +75,7 @@ $(document).on('click', '.wrapper a', function(){
       var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
       $.each(text, function(idx, obj) {
         $.each(obj.syn, function(index, wordobject){
-          $("#results ul").append('<a class="list-group-item">'+wordobject+'</a>');
+          $("#results div").append('<a class="list-group-item">'+wordobject+'</a>');
         });
       });
     };
