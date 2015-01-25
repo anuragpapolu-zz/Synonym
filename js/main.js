@@ -33,7 +33,7 @@ function makeCorsRequest() {
   var i;
   for (i = 0; i < word.length; ++i) {
     if(isInArray(word[i], bad_words) > -1) {
-      word.splice(i);
+      word.splice(i,1);
     }
   }
   console.log(word);
