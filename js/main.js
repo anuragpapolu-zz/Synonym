@@ -72,8 +72,9 @@ $(document).on('click', '.wrapper a', function(){
     // Response handlers.
     xhr.onload = function() {
       var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
-      console.log(text);
-
+      $.each(text, function(idx, obj) {
+        alert(obj.syn);
+      });
       $("#results").html('<ul class="list-group"><li class="list-group-item">'+text+'</li></ul>');
     };
     xhr.onerror = function() {
