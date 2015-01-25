@@ -37,12 +37,12 @@ function makeCorsRequest(word) {
     if(isInArray(value, random) > -1) {
       alert("DS");
       random.splice([isInArray(value, random)]);
-      wordarray[index] = "<span>"+value+"</span>";
+      wordarray[index] = "<span class='label label-warning'>"+value+"</span>";
     } 
 
     
   });
-  $(".wrapper").html(wordarray);
+  $(".wrapper").html(wordarray.toString());
 
 }
 $(".btn").click(function(){
