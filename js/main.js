@@ -45,7 +45,7 @@ function makeCorsRequest() {
         word.splice(i,1);
       }
     }
-  var wordarray = $(".wrapper").text().split(" ");
+  var wordarray = $.trim(text.replaceAll(',', ' , ').replaceAll('"', ' " ').replaceAll('!', ' ! ').replace('.', ' . ').replace('?', ' ? ')).split(" ");
   $.each(wordarray, function(index, value){
     if(isInArray(value, word) > -1) {
       wordarray[index] = "<a href='#"+value+"' class='label label-warning'>"+value+"</a>";
