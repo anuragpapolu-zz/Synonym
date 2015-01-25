@@ -47,5 +47,5 @@ function makeCorsRequest(word) {
 }
 
 $(".wrapper").bind('input propertychange', function(){
-  makeCorsRequest($(this).val());
+  makeCorsRequest($(this).text());
 });
