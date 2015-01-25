@@ -37,8 +37,8 @@ function makeCorsRequest(word) {
     xhr.onload = function() {
       var text = xhr.responseText;
       var title = getTitle(text);
-      essay.push(title);
-      
+      results.push(title);
+
     };
 
     xhr.onerror = function() {
@@ -47,7 +47,7 @@ function makeCorsRequest(word) {
 
     xhr.send();
   });
-  $("#results").text(essay);
+  $("#results").text(results);
 }
 
 $(".wrapper").bind('input propertychange', function(){
