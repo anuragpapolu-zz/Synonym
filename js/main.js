@@ -83,9 +83,9 @@ function makeCorsRequest() {
 
 }
 document.getElementById("edit").addEventListener("input", function() {
-  console.log(getCaretPosition(this));
+  makeCorsRequest();
 }, false);
-$(".btn-success").click(function(){ 
+$(document).on('click', '.wrapper a', function(){ 
     $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
@@ -115,7 +115,4 @@ $(document).on('click', '#results a', function(){
     $('.wrapper a[href="#'+value+'"]').removeClass("label-warning").addClass("label-success");
     $('.wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
     $("#results").html('<div class="list-group"></div>');
- });
- $(".btn-danger").click(function(){
-  $(".wrapper").html("");
  });
