@@ -84,7 +84,6 @@ function makeCorsRequest() {
 }
 document.getElementById("edit").addEventListener("input", function() {
   console.log(getCaretPosition(this));
-  makeCorsRequest();
 }, false);
 $(document).on('click', '.wrapper a', function(){ 
     $("#results").html('<div class="list-group"></div>');
