@@ -23,7 +23,7 @@ body,html{
   outline: 0;
   padding: 15px;
   word-wrap: break-word;
-  line-height: 90%;
+  line-height: 180%;
   border-radius: 5px;
   background: url(http://subtlepatterns.com/patterns/linedpaper.png);
 }
