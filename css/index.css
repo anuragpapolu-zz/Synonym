@@ -49,10 +49,3 @@ hr {
   font-size: 100%
   font-weight: normal;
 }
-.ui.top.attached.menu {
-    font-size: 120% !important;
-    border-radius: 0px !important;
-}
-.ui.top.attached.menu .item {
-    font-size: 120% !important;
-}

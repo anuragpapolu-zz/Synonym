@@ -20,40 +20,71 @@
  
   </head>
   <body>
-    <div class="ui top attached inverted menu">
-        <a class="item">
-          <i class="sidebar icon"></i>
-          
-        </a>
-        <div class="item">
-          Synomyn
+    <div class="ui grid">
+      <div class="computer tablet only row">
+        <div class="ui inverted fixed menu navbar page grid">
+          <a href="" class="brand item">Project Name</a>
+          <a href="" class="active item">Home</a>
+          <a href="" class="item">About</a>
+          <a href="" class="item">Contact</a>
+          <a class="ui dropdown item">Dropdown
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <div class="item">Action</div>
+              <div class="item">Another action</div>
+              <div class="item">Something else here</div>
+              <div class="ui divider"></div>
+              <div class="item">Seperated link</div>
+              <div class="item">One more seperated link</div>
+            </div>
+          </a>
+          <div class="right menu">
+            <a href="" class="item">Fixed top</a>
+          </div>
         </div>
+      </div>
+      <div class="mobile only row">
+          <div class="ui fixed inverted navbar menu">
+              <a href="" class="brand item">Project Name</a>
+              <div class="right menu open">
+                  <a href="" class="menu item">
+                      <i class="content icon"></i>
+                  </a>
+              </div>
+          </div>
+          <div class="ui vertical navbar menu">
+              <a href="" class="active item">Home</a>
+              <a href="" class="item">About</a>
+              <a href="" class="item">Contact</a>
+              <div class="ui item">
+                  <div class="text">Dropdown</div>
+                  <div class="menu">
+                      <a class="item">Action</a>
+                      <a class="item">Another action</a>
+                      <a class="item">Something else here</a>
+                      <a class="ui aider"></a>
+                      <a class="item">Seperated link</a>
+                      <a class="item">One more seperated link</a>
+                    </div>
+              </div>
+              <div class="menu">
+                  <a href="" class="active item">Default</a>
+                  <a href="" class="item">Static top</a>
+                  <a href="" class="item">Fixed top</a>
+              </div>
+          </div>
+      </div>
     </div>
-    <div class="ui bottom attached segment">
-        <div class="ui inverted labeled icon left inline vertical sidebar menu">
-          <a class="item">
-            <i class="home icon"></i>
-            Home
-          </a>
-          <a class="item">
-            <i class="block layout icon"></i>
-            Topics
-          </a>
-          <a class="item">
-            <i class="smile icon"></i>
-            Friends
-          </a>
-          <a class="item">
-            <i class="calendar icon"></i>
-            History
-          </a>
-        </div>
-        <div class="pusher">
-          <div class="ui basic segment">
+    <div class="ui page grid main">
+      <div class="row">
+        <div class="column padding-reset">
+          <div class="ui large message">
+            <h1 class="ui huge header">Navbar example</h1>
             <div id="results"></div>
             <div class="wrapper" id="edit"onClick="this.contentEditable='true';"></div>  
           </div>
         </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
