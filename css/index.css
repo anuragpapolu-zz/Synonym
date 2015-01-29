@@ -43,12 +43,12 @@ body {
 }
 .ui.segment {
   margin-top: 36px;
-  overflow-y: scroll;
+  height: 100% !important;
+  overflow-y: auto !important;
 }
 #edit {
   background: white;
   padding-bottom: 20px;
   outline: 0;
-  overflow-y: scroll;
   word-wrap: break-word;
 }
