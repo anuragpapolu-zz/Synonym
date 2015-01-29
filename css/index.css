@@ -41,7 +41,9 @@ body {
   width: 100%;
   display: none;
 }
-
+.two {
+  margin-top: 36px;
+}
 #edit {
   background: white;
   padding-bottom: 20px;
