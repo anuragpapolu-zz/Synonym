@@ -51,7 +51,7 @@ function isInArray(value, array) {
 }
 // Make the actual CORS request.
 function makeCorsRequest() {
-  var text = $(".wrapper").text();
+  var text = $("#edit").text();
   var word = $.trim(text.replaceAll(',', ' , ').replaceAll('"', ' " ').replaceAll('!', ' ! ').replace('.', ' . ').replace('?', ' ? ')).split(" ");
   var bad_words = ["all", "another", "own", "and", "any", "anybody", "anyone", "anything", "a", "both", "but", "each", "can't", "either", "everybody", "everyone", "everything", "few", "for", "he", "her", "herself", "hers", "him", "himself", "his","how", "I", "it", "itself", "its", "it’s", "many", "me", "mine", "more", "most", "much", "myself", "neither", "no one", "nobody", "none", "nothing","nor", "one", "one another","or", "other", "others", "ours", "ourselves", "several", "she", "so", "some", "somebody", "someone", "something", "that", "their",  "theirs", "them", "themselves", "these", "this", "they", "those", "to", "us", "we", "what", "whatever", "when", "which", "whichever", "who", "whoever", "whom", "whomever", "whose", "you", "your", "yours", "yourself", "yourselves", "yet", "back", "in", "the", "of", "our", "ours", "just", "on", "as","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety","hundred","thousand","million","billion","trillion","million",",",'"',"!","?"];
   var i;
@@ -79,13 +79,13 @@ function makeCorsRequest() {
 
     
   });
-  $(".wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
+  $("#edit").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
 
 }
 document.getElementById("edit").addEventListener("input", function() {
   makeCorsRequest();
 }, false);
-$(document).on('click', '.wrapper a', function(){ 
+$(document).on('click', '#edit a', function(){ 
     $("#results").html('<div class="list-group"></div>');
     var value = $(this).attr("href").replace("#","");
     var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
@@ -111,8 +111,8 @@ $(document).on('click', '.wrapper a', function(){
 $(document).on('click', '#results a', function(){ 
     var value = $(this).attr("href").replace("#","");
     var replacement = $(this).text();
-    $('.wrapper a[href="#'+value+'"]').text(replacement);
-    $('.wrapper a[href="#'+value+'"]').removeClass("label-warning").addClass("label-success");
-    $('.wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
+    $('#edit a[href="#'+value+'"]').text(replacement);
+    $('#edit a[href="#'+value+'"]').removeClass("label-warning").addClass("label-success");
+    $('." a[href="#'+value+'"]').attr('href', '#'+replacement);
     $("#results").html('<div class="list-group"></div>');
  });
