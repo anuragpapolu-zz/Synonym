@@ -50,7 +50,7 @@ hr {
   font-weight: normal;
 }
 .ui.top.attached.menu {
-    background: url(http://subtlepatterns.com/patterns/linedpaper.png);
+    font-size: 120% !important;
     border-radius: 0px !important;
 }
 .ui.top.attached.menu .item {
