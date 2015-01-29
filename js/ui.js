@@ -7,7 +7,7 @@ $(document).ready(function(){
   $('.ui.dropdown').dropdown();
 	$('.ui.sticky')
 	  .sticky({
-	    context: '#example1'
+	    context: '#edit'
 	  })
 	;
 });
