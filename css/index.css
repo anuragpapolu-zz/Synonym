@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 .ui.grid.main{
   margin-top: 70px;
 }
@@ -39,8 +43,9 @@
 #edit {
   margin-top: 10px;
   min-width: 100%;
-  min-height: 90%;
+  min-height: 100%;
   outline: 0;
+  overflow: scroll;
   padding: 15px;    
   margin-top: 36px;                                    
   word-wrap: break-word;
