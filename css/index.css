@@ -41,11 +41,7 @@ body {
   width: 100%;
   display: none;
 }
-.ui.segment {
-  margin-top: 36px;
-  height: 100% !important;
-  overflow-y: auto !important;
-}
+
 #edit {
   background: white;
   padding-bottom: 20px;
