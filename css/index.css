@@ -49,3 +49,6 @@ hr {
   font-size: 100%
   font-weight: normal;
 }
+.ui.top.attached.menu {
+    border-radius: 0px;
+}
