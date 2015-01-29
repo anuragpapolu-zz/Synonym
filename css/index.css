@@ -1,10 +1,22 @@
 body,html{
   height:100%;
+  background: url(http://subtlepatterns.com/patterns/footer_lodyas.png);
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
 }
-
+.col-md-8 {
+  height: 100%;
+  background: #eee;
+}
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  height: 100%;
+  width: 100%;
+}
 .wrapper{
   margin-top: 10px;
   min-width: 100%;
@@ -16,14 +28,30 @@ body,html{
   border-radius: 5px;
   background: url(http://subtlepatterns.com/patterns/linedpaper.png);
 }
-
+.logo {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.col-md-4 {
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow-y: scroll;
+  height: 100%;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 .label {
   font-size: 100%
   font-weight: normal;
 }
 .ui.top.attached.menu {
+    background: url(http://subtlepatterns.com/patterns/linedpaper.png);
     border-radius: 0px !important;
-    background: url(http://subtlepatterns.com/patterns/footer_lodyas.png) !important;
 }
 .ui.top.attached.menu .item {
     font-size: 120% !important;
