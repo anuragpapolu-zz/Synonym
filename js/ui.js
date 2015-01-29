@@ -1,4 +1,6 @@
-$('.demo.sidebar')
-  .sidebar('setting', 'transition', 'overlay')
-  .sidebar('toggle')
+$('.ui.sidebar')
+  .sidebar({
+    context: $('.bottom.segment')
+  })
+  .sidebar('attach events', 'top.menu .item')
 ;
