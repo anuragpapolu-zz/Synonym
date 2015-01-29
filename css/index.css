@@ -42,11 +42,11 @@ body {
   display: none;
 }
 .two {
-  margin-top: 36px;
+  margin-top: 36px !important;
 }
 #edit {
   background: white;
-  padding-bottom: 20px;
+  padding: 20px !important;
   outline: 0;
   word-wrap: break-word;
 }
