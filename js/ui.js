@@ -2,5 +2,5 @@ $('.ui.sidebar')
   .sidebar({
     context: $('.bottom.segment')
   })
-  .sidebar('attach events', 'top.menu .item')
+  .sidebar('attach events', '.menu .item')
 ;
