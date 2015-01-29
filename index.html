@@ -44,16 +44,17 @@
       </div>
     </div>
 
-        <div class="ui horizontal segment message-contain">
+        <div id="scroller"class="ui horizontal segment message-contain">
+          <div class="right ui rail">
+            <div class="ui sticky">
+              Extra 
+              <div id="results"></div>
+            </div>
+          </div>
+
           <div id="edit" class="ui floating message" onClick="this.contentEditable='true';">
           </div>
         </div>
-      <div class="ui rail right">
-        <div class="ui sticky">
-          Extra 
-          <div id="results"></div>
-        </div>
-      </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
