@@ -53,3 +53,6 @@ hr {
     font-size: 130% !important;
     border-radius: 0px !important;
 }
+.ui.top.attached.menu .item {
+    font-size: 130% !important;
+}
