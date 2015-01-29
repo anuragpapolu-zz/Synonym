@@ -5,9 +5,9 @@ $(document).ready(function(){
   });
     
   $('.ui.dropdown').dropdown();
-  $('.ui.sticky')
-  .sticky({
-    context: '#scroller'
-  })
-;
+	$('.ui.sticky')
+	  .sticky({
+	    context: '#example1'
+	  })
+	;
 });
