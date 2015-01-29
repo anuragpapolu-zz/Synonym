@@ -45,10 +45,10 @@ body {
   margin-top: 20px;
 }
 #edit {
-  
+  background: url(http://subtlepatterns.com/patterns/linedpaper.png);
   min-height: 300px;
   outline: 0;
   overflow-y: scroll;
-                                   
+  line-height: 19px !important;                                 
   word-wrap: break-word;
 }
