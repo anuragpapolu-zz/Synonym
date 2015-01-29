@@ -50,6 +50,6 @@ hr {
   font-weight: normal;
 }
 .ui.top.attached.menu {
-    font-size: 150%;
-    border-radius: 0px;
+    font-size: 130% !important;
+    border-radius: 0px !important;
 }
