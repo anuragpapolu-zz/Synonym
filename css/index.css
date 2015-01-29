@@ -36,6 +36,9 @@
   width: 100%;
   display: none;
 }
+.page {
+  margin-top: 36px;
+}
 #edit {
   margin-top: 10px;
   min-width: 100%;
