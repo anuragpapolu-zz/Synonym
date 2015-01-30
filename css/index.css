@@ -50,7 +50,10 @@ body {
   outline: 0;
   word-wrap: break-word;
 }
+.brand {
+  font-size: 180% !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
 .ui.inverted.menu {
   background: #16a085 !important;
-  font-size: 140% !important;
 }
