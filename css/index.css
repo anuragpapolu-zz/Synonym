@@ -50,3 +50,6 @@ body {
   outline: 0;
   word-wrap: break-word;
 }
+.inverted {
+  background-color: #16a085 !important;
+}
