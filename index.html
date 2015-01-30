@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Synomyn</title>
+    <title>Cinnamon</title>
 
     <!-- Bootstrap -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.8.1/semantic.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,37 +22,46 @@
     <div class="ui grid">
       <div class="computer tablet only row">
         <div class="ui inverted fixed menu navbar page grid">
-          <div class="brand item">Synomyn</div>
-          <a href="" class="active item">Home</a>
-          <a href="" class="item">About</a>
-          <a href="" class="item">Contact</a>
+          <div class="brand item">Cinnamon</div>
 
           <div class="right menu">
-            <a class="ui dropdown item">Options
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <div class="item">Action</div>
-                <div class="item">Another action</div>
-                <div class="item">Something else here</div>
-                <div class="ui divider"></div>
-                <div class="item">Seperated link</div>
-                <div class="item">One more seperated link</div>
-              </div>
-            </a>
+            <a href="" class="active item">Home</a>
+            <a href="" class="item">About</a>
+            <a href="" class="item">Contact</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="mobile only row">
+        <div class="ui fixed inverted navbar menu">
+          <a href="" class="brand item">Cinnamon</a>
+          <div class="right menu open">
+              <a class="ui dropdown item">
+                  <i class="content icon"></i>
+                  <div class="menu">
+                    <a href="" class="active item">Home</a>
+                    <a href="" class="item">About</a>
+                    <a href="" class="item">Contact</a>
+                  </div>
+              </a>
           </div>
         </div>
       </div>
     </div>
+
     <div class="ui two column grid">
       <div class="column">
         <div class="ui horizontal segment message-contain">
-          <div id="edit" class="ui floating message" onClick="this.contentEditable='true';">
-          </div>
+          <form class="ui form">
+            <div class="field">
+              <textarea placeholder="Your essay/article"></textarea>
+            </div>
+          </form>
         </div>
       </div>
       <div class="column">
         <div class="ui horizontal segment">
-          Extra 
+          Stuff 
           <div id="results"></div>
         </div>
       </div>

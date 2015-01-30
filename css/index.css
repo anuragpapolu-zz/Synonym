@@ -50,3 +50,9 @@ body {
   outline: 0;
   word-wrap: break-word;
 }
+.brand {
+  font-family: 'Pacifico', cursive !important;
+}
+.ui.inverted.menu {
+  background: #16a085 !important;
+}
