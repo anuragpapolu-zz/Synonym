@@ -5,4 +5,7 @@ $(document).ready(function(){
 	    transition: 'drop'
 	  })
 	;
+	$('.ui.accordion')
+	  .accordion()
+	;
 });
