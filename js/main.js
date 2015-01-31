@@ -64,7 +64,7 @@ $("#start").click(function(){
   $("#container").slideDown();
 });
 $(document).on('click', '#wrapper a', function(){ 
-  $("#results").html('<div class="ui vertical fluid menu"></div>');
+  $("#results .content .menu").slice(1).remove();
   var value = $(this).attr("href").replace("#","");
   var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
   var xhr = createCORSRequest('GET', url);
@@ -77,7 +77,7 @@ $(document).on('click', '#wrapper a', function(){
       var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
       $.each(text, function(idx, obj) {
         $.each(obj.syn, function(index, wordobject){
-          $("#results div").append('<a href="#'+value+'" class="item">'+wordobject+'</a>');
+          $("#results .content .menu").append('<a href="#'+value+'" class="item">'+wordobject+'</a>');
         });
       });
     };
@@ -85,19 +85,25 @@ $(document).on('click', '#wrapper a', function(){
       console.log('Woops, there was an error making the request.');
     };
     xhr.send();
+    $('.small.modal')
+      .modal('show')
+    ;
 });
 $(document).on('click', '#results a', function(){ 
   var value = $(this).attr("href").replace("#","");
   var replacement = $(this).text();
+    $('.small.modal')
+      .modal('hide')
+    ;
   $('#wrapper a[href="#'+value+'"]').text(replacement);
   $('#wrapper a[href="#'+value+'"]').removeClass("yellow").addClass("green");
   $('." a[href="#'+value+'"]').attr('href', '#'+replacement);
-  $("#results").html('<div class="ui vertical fluid menu"></div>');
+  $("#results .content .menu").slice(1).remove();
 });
 $("#return").click(function(){
   $("#container").slideUp();
   $("#edit").val($("#wrapper").text());
-  $("#results").html("");
+  $("#results .content .menu").slice(1).remove();
   $("#form").slideDown();
 });
 $("#remove").click(function(){
