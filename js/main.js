@@ -101,7 +101,7 @@ $("#return").click(function(){
   $("#form").slideDown();
 });
 $("#remove").click(function(){
-  $("#container").text("");
+  $("#wrapper").text("");
   $("#edit").val("");
 
 });
