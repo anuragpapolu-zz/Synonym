@@ -10,7 +10,7 @@ jQuery.fn.wordCount = function(params){
 	}
 	
 	//for each keypress function on text areas
-	this.keypress(function()
+	this.bind('input', function()
 	{ 
 		total_words=this.value.split(/[\s\.\?]+/).length;
 		jQuery('#'+p.counterElement).html(total_words);
