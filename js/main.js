@@ -61,7 +61,7 @@ function makeCorsRequest() {
 $("#start").click(function(){
   $("#form").slideUp();
   makeCorsRequest();
-  $("#wrapper").slideDown();
+  $("#container").slideDown();
 });
 $(document).on('click', '#wrapper a', function(){ 
   $("#results").html('<div class="ui vertical fluid menu"></div>');
@@ -94,3 +94,14 @@ $(document).on('click', '#results a', function(){
   $('." a[href="#'+value+'"]').attr('href', '#'+replacement);
   $("#results").html('<div class="ui vertical fluid menu"></div>');
 });
+$("#return").click(function(){
+  $("#container").slideUp();
+  $("#edit").val($("#wrapper").text());
+  $("#form").slideDown();
+});
+$("#remove").click(function(){
+  $("#container").text("");
+  $("#edit").val("");
+
+});
+
