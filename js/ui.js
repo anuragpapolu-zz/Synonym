@@ -1,13 +1,8 @@
 $(document).ready(function(){
-  $('.right.menu.open').on("click",function(e){
-    e.preventDefault();
-    $('.ui.vertical.menu').toggle();
-  });
-    
-  $('.ui.dropdown').dropdown();
-	$('.ui.sticky')
-	  .sticky({
-	    context: '#edit'
+	$('.dropdown')
+	  .dropdown({
+	    // you can use any ui transition
+	    transition: 'drop'
 	  })
 	;
 });
