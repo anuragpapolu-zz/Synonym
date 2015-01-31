@@ -97,7 +97,7 @@ $(document).on('click', '#results .content .menu a', function(){
     ;
   $('#wrapper a[href="#'+value+'"]').text(replacement);
   $('#wrapper a[href="#'+value+'"]').removeClass("yellow").addClass("green");
-  $('a[href="#'+value+'"]').attr('href', '#'+replacement);
+  $('#wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
   $("#results .content .menu").slice(1).remove();
 });
 $("#return").click(function(){
