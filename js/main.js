@@ -97,6 +97,7 @@ $(document).on('click', '#results a', function(){
 $("#return").click(function(){
   $("#container").slideUp();
   $("#edit").val($("#wrapper").text());
+  $("#results").html("");
   $("#form").slideDown();
 });
 $("#remove").click(function(){
