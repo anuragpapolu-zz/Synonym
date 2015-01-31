@@ -89,7 +89,7 @@ $(document).on('click', '#wrapper a', function(){
       .modal('show')
     ;
 });
-$(document).on('click', '#results a', function(){ 
+$(document).on('click', '#results .content .menu a', function(){ 
   var value = $(this).attr("href").replace("#","");
   var replacement = $(this).text();
     $('.long.modal')
