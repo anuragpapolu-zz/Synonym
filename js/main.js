@@ -92,7 +92,7 @@ $(document).on('click', '#wrapper a', function(){
 $(document).on('click', '#results a', function(){ 
   var value = $(this).attr("href").replace("#","");
   var replacement = $(this).text();
-    $('.small.modal')
+    $('.long.modal')
       .modal('hide')
     ;
   $('#wrapper a[href="#'+value+'"]').text(replacement);
