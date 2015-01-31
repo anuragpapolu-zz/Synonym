@@ -92,12 +92,11 @@ $(document).on('click', '#wrapper a', function(){
 $(document).on('click', '#results .content .menu a', function(){ 
   var value = $(this).attr("href").replace("#","");
   var replacement = $(this).text();
-    $('.long.modal')
-      .modal('hide')
-    ;
+
   $('#wrapper a[href="#'+value+'"]').text(replacement);
   $('#wrapper a[href="#'+value+'"]').removeClass("yellow").addClass("green");
   $('#wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
+    $('.long.modal').modal('hide');
   $("#results .content .menu").slice(1).remove();
 });
 $("#return").click(function(){
