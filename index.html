@@ -53,20 +53,21 @@
     <div class="ui two column grid">
       <div class="ten wide column">
         <div class="ui horizontal segment message-contain">
-          <form class="ui form">
+          <form id="form" class="ui form">
             <div class="field">
-              <textarea placeholder="Your essay/article"></textarea>
+              <textarea id="edit" placeholder="Your essay/article"></textarea>
             </div>
             <div class="2 ui buttons fluid">
-              <div class="ui negative button"><i class="remove circle icon"></i></div>
-              <div class="ui positive button"><i class="check circle icon"></i></div>
+              <div id="remove" class="ui negative button"><i class="remove circle icon"></i></div>
+              <div id="start" class="ui positive button"><i class="check circle icon"></i></div>
             </div>
           </form>
+          <div id="wrapper" class="ui piled segment">
+          </div>
         </div>
       </div>
       <div class="six wide column">
         <div class="ui horizontal segment">
-          Stuff 
           <div id="results"></div>
         </div>
       </div>

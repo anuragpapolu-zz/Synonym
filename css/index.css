@@ -56,3 +56,6 @@ body {
 .ui.inverted.menu {
   background: #16a085 !important;
 }
+#wrapper {
+  display: none;
+}
