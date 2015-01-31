@@ -85,7 +85,7 @@ $(document).on('click', '#wrapper a', function(){
       console.log('Woops, there was an error making the request.');
     };
     xhr.send();
-    $('.small.modal')
+    $('.long.modal')
       .modal('show')
     ;
 });
