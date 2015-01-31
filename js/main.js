@@ -64,7 +64,7 @@ $("#start").click(function(){
   $("#container").slideDown();
 });
 $(document).on('click', '#wrapper a', function(){ 
-  $("#results .content .menu").slice(1).remove();
+  $("#results .content .menu a").slice(1).remove();
   var value = $(this).attr("href").replace("#","");
   var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
   var xhr = createCORSRequest('GET', url);
@@ -96,13 +96,13 @@ $(document).on('click', '#results .content .menu a', function(){
   $('#wrapper a[href="#'+value+'"]').text(replacement);
   $('#wrapper a[href="#'+value+'"]').removeClass("yellow").addClass("green");
   $('#wrapper a[href="#'+value+'"]').attr('href', '#'+replacement);
-    $('.long.modal').modal('hide');
-  $("#results .content .menu").slice(1).remove();
+  $('.long.modal').modal('hide');
+  $("#results .content .menu a").slice(1).remove();
 });
 $("#return").click(function(){
   $("#container").slideUp();
   $("#edit").val($("#wrapper").text());
-  $("#results .content .menu").slice(1).remove();
+  $("#results .content .menu a").slice(1).remove();
   $("#form").slideDown();
 });
 $("#remove").click(function(){
