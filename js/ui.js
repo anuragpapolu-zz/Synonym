@@ -12,7 +12,7 @@ jQuery.fn.wordCount = function(params){
 	//for each keypress function on text areas
 	this.bind('input', function()
 	{ 
-		if($.trim(this.val()) == "" ) {
+		if($.trim($("#edit").val()) == "" ) {
 			total_words = 0; 
 		} else {
 			total_words=this.value.split(/[\s\.\?]+/).length;
