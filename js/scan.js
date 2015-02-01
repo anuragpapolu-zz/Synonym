@@ -42,7 +42,7 @@ function scan() {
   $("#wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
 }
 $("#start").click(function(){
-  $("#form").slideUp();
+  $("#form").transition('horizontal flip');
   scan();
-  $("#container").slideDown();
+  $("#container").transition('horizontal flip');
 });

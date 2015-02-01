@@ -26,10 +26,10 @@ $(document).ready(function(){
 	  $("#results .content .menu .item").slice(1).remove();
 	});
 	$("#return").click(function(){
-	  $("#container").transition('horizontal flip')();
+	  $("#container").transition('horizontal flip');
 	  $("#edit").val($("#wrapper").text());
 	  $("#results .content .menu .item").slice(1).remove();
-	  $("#form").transition('horizontal flip')();
+	  $("#form").transition('horizontal flip');
 	});
 	$("#remove").click(function(){
 	  $("#wrapper").text("");
