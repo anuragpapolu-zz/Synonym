@@ -117,7 +117,7 @@ $('#search').on('input', function() {
     var filter = new RegExp($(this).val(), "i");
     var cache = $("#results .content .menu a.item");
     cache.filter(function (){
-      return $(this).text().toLower().indexOf(val) < 1;
+      return $(this).text().toLowerCase().indexOf(val) < 1;
     }).hide();
 
   });
