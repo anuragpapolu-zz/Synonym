@@ -114,10 +114,13 @@ $("#remove").click(function(){
 });
 
 $('#search').on('input', function() { 
-    var val = $(this).val();
-    var cache = $("#results .content .menu a.item");
-    cache.filter(function (){
-      return $(this).text().toLowerCase().indexOf(val) < 1;
-    }).hide();
+    var filter = new RegExp($(this).val(), "i");
 
+    $("#results .content .menu a.item").each(function(){
+      if ($(this).text().toLowerCase().indexOf($.trim(filter.toLowerCase())) > -1) {
+        $(this).hide();
+      } else {
+        $(this).show();
+      }
+    });
   });
