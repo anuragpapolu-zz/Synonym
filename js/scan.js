@@ -1,3 +1,15 @@
+function getTitle(text) {
+  var list = eval('(' + text+ ')');
+  return list;
+}
+
+String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+  return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+} 
+function isInArray(value, array) {
+  return array.indexOf(value);
+}
 function scan() {
   var text = $("#edit").val();
   var word = $.trim(text.replaceAll(',', ' , ').replaceAll('"', ' " ').replaceAll('!', ' ! ').replace('.', ' . ').replace('?', ' ? ')).split(" ");

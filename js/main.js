@@ -14,6 +14,7 @@ xhr = null;
 return xhr;
 }
 // Helper method to parse the title tag from the response.
+
 // Make the actual CORS request.
 
 $(document).on('click', '#wrapper a', function(){ 
