@@ -117,7 +117,7 @@ $('#search').on('input', function() {
     var filter = new RegExp($(this).val(), "i");
 
     $("#results .content .menu a.item").each(function(){
-      if ($(this).text().toLowerCase().indexOf($.trim(filter.toLowerCase())) > -1) {
+      if (!$(this).text().match(filter)) {
         $(this).hide();
       } else {
         $(this).show();
