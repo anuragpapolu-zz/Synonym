@@ -115,12 +115,9 @@ $("#remove").click(function(){
 
 $('#search').on('input', function() { 
     var filter = new RegExp($(this).val(), "i");
+    var cache = $("#results .content .menu a.item");
+    cache.filter(function (){
+      return $(this).text().toLower().indexOf(val) < 1;
+    }).hide();
 
-    $("#results .content .menu a.item").each(function(){
-      if (!$(this).text().match(filter)) {
-        $(this).hide();
-      } else {
-        $(this).show();
-      }
-    });
   });
