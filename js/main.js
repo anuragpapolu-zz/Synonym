@@ -108,6 +108,19 @@ $("#return").click(function(){
 $("#remove").click(function(){
   $("#wrapper").text("");
   $("#edit").val("");
-
+  $("#display_words").text("0");
+  $("#display_chars").text("0");
+  $("#display_paragraphs").text("0");
 });
 
+$('#search').on('input', function() { 
+    var filter = new RegExp($(this).val(), "i");
+
+    $("#results .content .menu a.item").each(function(){
+      if (!$(this).text().match(filter)) {
+        $(this).hide();
+      } else {
+        $(this).show();
+      }
+    });
+  });
