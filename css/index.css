@@ -48,6 +48,8 @@ body {
   background: white;
   padding: 20px !important;
   outline: 0;
+  resize: none;
+  height: 24em !important;
   word-wrap: break-word;
 }
 .brand {
