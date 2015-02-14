@@ -36,7 +36,7 @@ function scan() {
 
     
   });
-  $("#wrapper").html(wordarray.join(" ").replaceAll(' ,', ', ').replaceAll(' " ', '"').replaceAll(' !', '! ').replace(' .', '. ').replace(' ?', '? '));
+  $("#wrapper").html(wordarray.join(" "));
 }
 $("#start").click(function(){
   $("#form").slideUp();
