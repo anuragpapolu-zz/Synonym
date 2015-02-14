@@ -37,7 +37,7 @@ function scan() {
     
   });
   var content = wordarray.join(" ");
-  $("#wrapper").html(content.replace(/ ./g , ".").replaceAll(' "', '"').replaceAll(' !', '!').replace(' .', '.').replace(' ?', '? '));
+  $("#wrapper").html(content.replaceAll(' ,', ',').replaceAll(' "', '"').replaceAll(' !', '!').replaceAll(' .', '.').replaceAll(' ?', '? '));
 }
 $("#start").click(function(){
   $("#form").slideUp();
