@@ -25,6 +25,8 @@ function scan() {
         word.splice(index,1);
       }
     }
+    console.log(word);
+
   });
   for (i = 0; i < word.length/2; i++) { 
     var randomElementIndex = Math.floor( Math.random() * word.length );
