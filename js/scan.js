@@ -36,7 +36,8 @@ function scan() {
 
     
   });
-  $("#wrapper").html(wordarray.join(" ").replaceAll(' ,', ',').replaceAll(' "', '"').replaceAll(' !', '!').replace(' .', '.').replace(' ?', '? '));
+  var content = wordarray.join(" ");
+  $("#wrapper").html(content.replaceAll(' ,', ',').replaceAll(' "', '"').replaceAll(' !', '!').replace(' .', '.').replace(' ?', '? '));
 }
 $("#start").click(function(){
   $("#form").slideUp();
