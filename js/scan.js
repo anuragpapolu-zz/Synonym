@@ -29,7 +29,8 @@ function scan() {
   for (i = 0; i < word.length/2; i++) { 
     var randomElementIndex = Math.floor( Math.random() * word.length );
     word.splice(randomElementIndex, 1);
-  } 
+  }
+  console.log(word); 
   var wordarray = text.match(/[\w-']+|[^\w\s]+/g);
 
   $.each(wordarray, function(index, value){
