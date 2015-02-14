@@ -20,7 +20,9 @@ function scan() {
       word.splice(index,1);
     } else if (word[index] == "") {
       word.splice(index,1);
-    } 
+    } else if (value.length <= 2) {
+      word.splice(index,1);
+    }
   });
   var wordarray = text.match(/[\w-']+|[^\w\s]+/g);
   $.each(wordarray, function(index, value){
