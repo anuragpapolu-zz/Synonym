@@ -20,6 +20,8 @@ function scan() {
       word.splice(i,1);
     } else if (word[i] == "") {
       word.splice(i,1);
+    } else if (word.length <= 2) {
+      word.splice(i,1);
     }
   }
   var wordarray = text.match(/[\w-']+|[^\w\s]+/g);
