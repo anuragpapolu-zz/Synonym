@@ -20,7 +20,7 @@ function scan() {
       word.splice(index,1);
     } else if (word[index] == "") {
       word.splice(index,1);
-    } else if (word[index].length <= 2) {
+    } else if (word[index].split(" ").join("").length <= 2) {
       word.splice(index,1);
     }
   });
