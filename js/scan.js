@@ -18,7 +18,7 @@ function scan() {
   for (i = 0; i < word.length; i++) { 
         if(word[i].length <= 2) {
           word.splice(i,1);
-        } else if (isInArray(word[i], bad_words) == -1) {
+        } else if (isInArray(word[i], bad_words) > -1) {
           word.splice(i,1);
         }
   }
