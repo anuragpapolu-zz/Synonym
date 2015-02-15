@@ -21,7 +21,7 @@ function scan() {
   }
    
   var wordarray = text.match(/[\w-']+|[^\w\s]+/g);
-
+  console.log(isInArray("with", bad_words));
   $.each(wordarray, function(index, value){
     if(isInArray(value, word) > -1 && value.length > 2 && isInArray(value, bad_words) == -1) {
       wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
