@@ -23,7 +23,7 @@ function scan() {
   var wordarray = text.match(/[\w-']+|[^\w\s]+/g);
 
   $.each(wordarray, function(index, value){
-    if(isInArray(value, word) > -1 && word[i].length > 2 && isInArray(word[i], bad_words) > -1) {) {
+    if(isInArray(value, word) > -1 && word[i].length > 2 && isInArray(word[i], bad_words) > -1) {
       wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
       word.splice(isInArray(value, word),1);
 
