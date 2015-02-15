@@ -17,7 +17,7 @@ function scan() {
 
 
   $.each(word, function(index, value){
-    alert(word[index]);
+    alert("SSA");
     
   });
   for (i = 0; i < Math.floor( Math.random() * word.length/2); i++) { 
