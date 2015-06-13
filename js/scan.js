@@ -49,17 +49,19 @@ function scan() {
         // Response handlers.
         xhr.onload = function() {
         var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
+        var syns = 0;
             $.each(text, function(idx, obj) {
-              var syns = 0;
+              
               $.each(obj.syn, function(index, wordobject){
                 syns += 1;
               });
-              if(syns > 0) {
-                alert(value)
-              }
+
             });
-             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
-            word.splice(isInArray(value, word),1);    
+            if(syns > 0) {
+               wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
+              word.splice(isInArray(value, word),1);   
+            }
+ 
 
 
         };
