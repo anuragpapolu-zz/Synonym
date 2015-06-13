@@ -48,8 +48,8 @@ function scan() {
       }
         // Response handlers.
         xhr.onload = function() {
-          var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
-          if(text){
+          if(xhr.responseText){
+            var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
             word.splice(isInArray(value, word),1);            
           }
