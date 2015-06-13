@@ -43,4 +43,4 @@ $(document).on('click', '#wrapper a', function(){
       .modal('show')
     ;
 });
-
+$(document).on('contextmenu', '#wrapper a', function(){ $(this).replaceWith(this.childNodes); });
