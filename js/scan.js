@@ -50,9 +50,10 @@ function scan() {
         xhr.onload = function() {
           if(xhr.responseText){
             var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
-            wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
-            word.splice(isInArray(value, word),1);            
+          
           }
+            wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
+            word.splice(isInArray(value, word),1);  
         };
         xhr.onerror = function() {
           console.log('Woops, there was an error making the request.');
