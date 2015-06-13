@@ -53,8 +53,10 @@ function scan() {
           $.each(text, function(idx, obj) {
             $.each(obj.syn, function(index, wordobject){
              syns += 1;
+             
             });
           });
+          console.log(syns);
           if(syns != 0) {
              wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
             word.splice(isInArray(value, word),1);           
