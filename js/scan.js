@@ -56,10 +56,8 @@ function scan() {
              
             });
           });
-          console.log(syns);
-          if(syns != 0) {
-             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
-            word.splice(isInArray(value, word),1);           
+          if(syns) {
+            console.log(syns); 
           }
           syns = 0;
 
@@ -68,7 +66,8 @@ function scan() {
           console.log('Woops, there was an error making the request.');
         };
         xhr.send();
-        
+             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
+            word.splice(isInArray(value, word),1);                  
 
       
     } 
