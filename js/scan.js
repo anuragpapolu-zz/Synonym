@@ -49,14 +49,17 @@ function scan() {
         // Response handlers.
         xhr.onload = function() {
           var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
+          if(text){
+            wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
+            word.splice(isInArray(value, word),1);            
+          }
           console.log(text);
         };
         xhr.onerror = function() {
           console.log('Woops, there was an error making the request.');
         };
         xhr.send();      
-      wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
-      word.splice(isInArray(value, word),1);
+
       
     } 
 
