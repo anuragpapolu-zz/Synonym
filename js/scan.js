@@ -53,7 +53,6 @@ function scan() {
             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
             word.splice(isInArray(value, word),1);            
           }
-          console.log(text);
         };
         xhr.onerror = function() {
           console.log('Woops, there was an error making the request.');
