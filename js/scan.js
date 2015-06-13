@@ -42,7 +42,6 @@ function scan() {
       var value = value;
       var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
       var xhr = createCORSRequest('GET', url);
-      var syns = 0;
       if (!xhr) {
         console.log('CORS not supported');
         return;
