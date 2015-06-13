@@ -40,6 +40,9 @@ function scan() {
   $.each(wordarray, function(index, value){
     if(isInArray(value, word) > -1 && value.length > 2 && isInArray(value.toLowerCase(), bad_words) == -1) {
       var value = value;
+             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
+            word.splice(isInArray(value, word),1);                  
+
       var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
       var xhr = createCORSRequest('GET', url);
       var syns = 0;
@@ -66,9 +69,6 @@ function scan() {
           console.log('Woops, there was an error making the request.');
         };
         xhr.send();
-             wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
-            word.splice(isInArray(value, word),1);                  
-
       
     } 
 
