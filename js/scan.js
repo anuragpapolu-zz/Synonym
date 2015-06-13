@@ -40,35 +40,10 @@ function scan() {
   $.each(wordarray, function(index, value){
     if(isInArray(value, word) > -1 && value.length > 2 && isInArray(value.toLowerCase(), bad_words) == -1) {
       var value = value;
-      var url = 'http://words.bighugelabs.com/api/2/913ccf11d02b6fc55bef17fcaebe89d9/'+value+'/json';
-      var xhr = createCORSRequest('GET', url);
-      if (!xhr) {
-        console.log('CORS not supported');
-        return;
-      }
-        // Response handlers.
-        xhr.onload = function() {
-        var text = jQuery.parseJSON(JSON.stringify(eval("(" + xhr.responseText + ")")));
-        var syns = 0;
-            $.each(text, function(idx, obj) {
-              
-              $.each(obj.syn, function(index, wordobject){
-                syns += 1;
-              });
 
-            });
-            if(syns > 0) {
                wordarray[index] = "<a href='#"+value+"' class='ui yellow label'>"+value+"</a>";
               word.splice(isInArray(value, word),1);   
-            }
- 
 
-
-        };
-        xhr.onerror = function() {
-          console.log('Woops, there was an error making the request.');
-        };
-        xhr.send();
       
     } 
 
