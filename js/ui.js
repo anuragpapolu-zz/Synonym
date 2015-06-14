@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $(".test").focusout(function(){
+        var element = $(this);        
+        if (!element.text().replace(" ", "").length) {
+            element.empty();
+        }
+    });
 	var area = document.getElementById('edit')
 
 	Countable.live(area, function (counter) {

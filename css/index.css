@@ -3,6 +3,14 @@ body {
   height: 100%;
   width: 100%;
 }
+.test[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555; 
+}
+
+.test[placeholder]:empty:focus:before {
+    content: "";
+}
 .ui.grid.column {
   margin-top: 50px !important;
 }
