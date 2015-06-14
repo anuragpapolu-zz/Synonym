@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
 	new Medium({
-	    element: document.getElementById('comment'),
-	    mode: Medium.partialMode,
-	    placeholder: 'Your Comment'
+	    element: document.getElementById('article'),
+	    mode: Medium.richMode,
+	    placeholder: 'Your Article'
 	});
 });
