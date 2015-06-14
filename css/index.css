@@ -3,9 +3,8 @@ body {
   height: 100%;
   width: 100%;
 }
-[contenteditable=true]:empty:before{
-  content: attr(placeholder) !important;
-  display: block !important; /* For Firefox */
+#article:read-write:focus {
+     outline: none;
 }
 
 .ui.grid.column {
