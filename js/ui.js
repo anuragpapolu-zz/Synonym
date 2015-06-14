@@ -1,9 +1,8 @@
 
 $(document).ready(function(){
-
-
-			new Medium({
-                element: document.getElementById('editor')
-            });
-
+	new Medium({
+	    element: document.getElementById('comment'),
+	    mode: Medium.partialMode,
+	    placeholder: 'Your Comment'
+	});
 });
