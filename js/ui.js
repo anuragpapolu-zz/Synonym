@@ -4,5 +4,9 @@ $(document).ready(function(){
 	    element: document.getElementById('article'),
 	    mode: Medium.richMode,
 	    placeholder: 'Your Article'
+		tags: {
+			'horizontalRule': null,
+
+		}
 	});
 });
