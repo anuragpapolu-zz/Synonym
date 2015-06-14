@@ -5,7 +5,7 @@ $(document).ready(function(){
 	    mode: Medium.richMode,
 	    placeholder: 'Your Article',
 		tags: {
-			'horizontalRule': "",
+			'horizontalRule': ""
 
 		}
 	});
