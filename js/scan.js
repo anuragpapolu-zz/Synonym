@@ -7,12 +7,12 @@ $('body').keyup(function(e){
           for(var i=0; i< html.length; i++) {
 
               if(i>0 && (i%2) == 0)
-                  newhtml.push("</i><i>");
+                  newhtml.push("</i> <i>");
 
               newhtml.push(html[i]);
           }
 
-          $(this).html("<i>"+ newhtml.join(" ") +"</i>");
+          $(this).html("<i>"+ newhtml.join(" ") +"</i> ");
       });
    }
 });
