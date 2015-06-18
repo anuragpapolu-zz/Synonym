@@ -12,10 +12,12 @@ body {
     display: inline;
     z-index: -1;
 }
+#article {
+  position: relative;
+}
 #article:read-write:focus {
      outline: none;
 }
-
 .ui.grid.column {
   margin-top: 50px !important;
 }
@@ -76,5 +78,6 @@ body {
 }
 #checker {
   visibility: hidden;
+  position: relative;
 }
 
