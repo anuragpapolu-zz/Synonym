@@ -21,7 +21,7 @@ function doneTyping () {
       $(this).html(result.join(' '));
     });
     $("#checker").html(content);
-    $("#checker").attr("margin-top", "-"+$("#article").height()+"px").html(content);
+    $("#checker").css("margin-top", "-"+$("#article").height()+"px").html(content);
     $("#checker span").each(function(){
       var id = $(this).attr('id');
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
