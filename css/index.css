@@ -84,4 +84,6 @@ body {
     height: 0!important;
   color: transparent !important;
 }
-
+#trash {
+  display: none;
+}

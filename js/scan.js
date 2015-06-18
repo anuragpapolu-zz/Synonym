@@ -14,7 +14,7 @@
 })(jQuery);
 var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
-$('#article').wysiwygEvt(function() {
+$('#article').typing(function() {
     $("#checker").css("margin-top", "-"+$("#article").height()+"px");
     clearTimeout(typingTimer);
      typingTimer = setTimeout(doneTyping, doneTypingInterval);
@@ -52,7 +52,7 @@ function doneTyping () {
                   $("#checker #"+id).addClass('checked');
                   $(".accordion").append('<div class="title">'+text+'</div><div id="'+id+'"class="content ui list"></div>');
                   for (var i = data[0].words.length - 1; i >= 0; i--) {
-                    $("#results #"+id).append("<a class='item'>"+data[0].words[i]+"</a>");
+                    $("#results #"+id).append("<a class='item synonyms'>"+data[0].words[i]+"</a>");
                   };
                   
                   $('.ui.accordion')
