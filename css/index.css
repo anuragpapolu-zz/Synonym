@@ -65,8 +65,11 @@ body {
 .ui.inverted.menu {
   background: #16a085 !important;
 }
-#mimic, #checker {
-  display: none !important;
+#mimic {
+  display: none;
+}
+#checker {
+  visibility: hidden;
 }
 #checker span {
     visibility: visible;
