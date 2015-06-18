@@ -66,5 +66,5 @@ body {
   background: #16a085 !important;
 }
 #mimic {
-  display: none;
+  display: none !important;
 }
