@@ -1,5 +1,17 @@
 var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
+$('body').on('click', 'a.synonyms', function() {
+    $("#checker").find("#"+$(this).parent().attr("id")).text($(this).text());
+    $("#trash").html($("#checker").html());
+    $("#trash span").each(function() {
+      $(this).contents().unwrap();
+    });
+    $("#article").html($("#trash").html());
+    $("#checker").css("margin-top", "-"+$("#article").height()+"px");
+    clearTimeout(typingTimer);
+     typingTimer = setTimeout(doneTyping, doneTypingInterval);
+     
+});
 document.getElementById("article").addEventListener("input", function() {
     $("#checker").css("margin-top", "-"+$("#article").height()+"px");
     clearTimeout(typingTimer);
@@ -61,15 +73,3 @@ function doneTyping () {
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
   }
 }
-$('body').on('click', 'a.synonyms', function() {
-    $("#checker").find("#"+$(this).parent().attr("id")).text($(this).text());
-    $("#trash").html($("#checker").html());
-    $("#trash span").each(function() {
-      $(this).contents().unwrap();
-    });
-    $("#article").html($("#trash").html());
-    $("#checker").css("margin-top", "-"+$("#article").height()+"px");
-    clearTimeout(typingTimer);
-     typingTimer = setTimeout(doneTyping, doneTypingInterval);
-     
-});
