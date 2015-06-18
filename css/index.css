@@ -3,6 +3,9 @@ body {
   height: 100%;
   width: 100%;
 }
+.checked {
+    border-bottom: 1px solid #f1c40f; 
+}
 #article:read-write:focus {
      outline: none;
 }
