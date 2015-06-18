@@ -5,6 +5,12 @@ body {
 }
 .checked {
     border-bottom: 1px solid #f1c40f; 
+    visibility: visible;
+
+    position: relative;
+
+    display: inline;
+    z-index: -1;
 }
 #article:read-write:focus {
      outline: none;
@@ -71,11 +77,4 @@ body {
 #checker {
   visibility: hidden;
 }
-#checker span {
-    visibility: visible;
 
-    position: relative;
-
-    display: inline;
-    z-index: -1;
-}
