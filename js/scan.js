@@ -6,5 +6,9 @@ document.getElementById("article").addEventListener("input", function() {
 }, false);
 
 function doneTyping () {
-    alert("GO");
+  $("#checker").html($("#mimic").html(), function(){
+    $("#mimic").html($("#article").html());
+  });
+
+  
 }
