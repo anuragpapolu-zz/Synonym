@@ -68,6 +68,7 @@ function syno () {
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
 $(document).on("mouseenter", "a.synonyms", function() {
+  alert("SS");
     $("#checker").find("#"+$(this).parent().attr("id")).trigger('mouseenter');
 });
 
