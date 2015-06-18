@@ -15,7 +15,7 @@ $('body').on('click', 'a.synonyms', function() {
     });
     $("#article").html($("#trash").html());
     console.log("a");
-    $("#article").trigger("keypress");
+    doneTyping();
     console.log("b");
      
 });
