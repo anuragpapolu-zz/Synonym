@@ -15,6 +15,7 @@ body {
 #article {
   position: relative;
   z-index: -1;
+  pointer-events:all;
 }
 #article:read-write:focus {
      outline: none;
