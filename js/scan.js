@@ -20,10 +20,11 @@ function syno () {
 
     var content = $("#mimic").html();
     var words = $("#article").html().split(" ");
-    $("#mimic").empty();
+    var newcontent = [];
     $.each(words, function(i, v) {
-        $("#mimic").append($('<span id="'+i+'">').text(v));
+        newcontent.push($('<span id="'+i+'">'+v+'</span>')));
     });
+    $("#mimic").html(newcontent.join(" "));
     $("#checker").html(content);
     $('.ui.accordion').html("");
     $("#checker span").each(function(){
