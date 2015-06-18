@@ -68,12 +68,11 @@ function syno () {
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
 $(document).on("mouseenter", "a.synonyms", function() {
-  alert("SS");
-    $("#checker").find("#"+$(this).parent().attr("id")).trigger('mouseenter');
+    $("#checker").find("#"+$(this).parent().attr("id")).css('border-bottom','1px solid #16a085');
 });
 
 $(document).on("mouseleave", "a.synonyms", function() {
-    $("#checker").find("#"+$(this).parent().attr("id")).trigger('mouseleave');
+    $("#checker").find("#"+$(this).parent().attr("id")).css('border-bottom','1px solid #f1c40f');
 });
 
 
