@@ -20,15 +20,15 @@ function syno () {
 
     var content = $("#mimic").html();
     $("#mimic").html($("#article").html());
-    $('#mimic').each(function(){
-      var text = $(this).html().split(' '),
+      var text = $("#mimic").html().split(" "),
           len = text.length,
           result = []; 
-      for( var i = 0; i < len; i++ ) {
+    $('#mimic').each(function(){
+
         result[i] = '<span id="'+i+'">' + text[i] + '</span>';
-      }
-      $(this).html(result.join(' '));
     });
+          $("#mimic").html(result.join(" "));
+
     $("#checker").html(content);
     $('.ui.accordion').html("");
     $("#checker span").each(function(){
