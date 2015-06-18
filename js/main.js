@@ -6,5 +6,5 @@ $('body').on('click', 'a.synonyms', function() {
     $("#trash span").each(function() {
     	$(this).contents().unwrap();
     });
-    $("article").html($("#trash").html());
+    $("#article").html($("#trash").html());
 });
