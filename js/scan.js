@@ -6,16 +6,7 @@ document.getElementById("article").addEventListener("input", function() {
 }, false);
 
 var bad_words = ["at", "an","all", "another", "own", "be", "and", "any","from", "there","anybody", "anyone", "anything", "a", "both", "but", "each", "can't", "either", "everybody", "everyone", "everything", "are","few", "for", "he", "her", "herself", "hers", "him", "himself", "his","how", "I", "it", "itself", "its", "it’s", "many", "me", "mine", "more", "most", "much", "myself", "neither", "no one", "nobody", "none", "nothing","nor", "one", "one another","or", "other", "others", "ours", "ourselves", "several", "she", "so", "some", "somebody", "someone", "something", "that", "their",  "theirs", "them", "themselves", "these", "this", "they", "those", "to", "us", "we", "what", "whatever", "when", "which", "whichever", "who", "whoever", "whom", "whomever", "whose", "you", "your", "yours", "yourself", "yourselves", "yet", "back", "in", "the", "of", "our", "ours", "just", "on", "as","one","two","three","four","five","six","seven","eight","with","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety","hundred","thousand","million","billion","trillion","million",",",'"',"!","?"];  
-$.ajax({
-  url: "http://api.wordnik.com:80/v4/word.json/run/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=7026726c936e0ea32700d53c3c60294e50e5db2f2dab65fc5",
-  type: "get",
-  data: {
-    type: 0
-  },
-  success: function(data) {
-    alert(data);
-  }
-});
+
 function doneTyping () {
   if($("#checker").text()!=$("#article").text()) {
     var content = $("#mimic").html();
@@ -34,7 +25,21 @@ function doneTyping () {
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
         if($(this).attr('class')!="checked" && $(this).attr('class')!="none") {
           if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
-            $(this).addClass('checked');
+            $.ajax({
+              url: "http://api.wordnik.com:80/v4/word.json/run/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=7026726c936e0ea32700d53c3c60294e50e5db2f2dab65fc5",
+              type: "get",
+              data: {
+                type: 0
+              },
+              success: function(data) {
+                if(data.words.length > 0) {
+                  $(this).addClass('checked');
+                } else {
+                  $(this).addClass('none');
+                }
+              }
+            });
+            
           } else {
             $(this).addClass('none');
           }
