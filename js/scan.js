@@ -68,5 +68,8 @@ $('body').on('click', 'a.synonyms', function() {
       $(this).contents().unwrap();
     });
     $("#article").html($("#trash").html());
-    $("#article").trigger("input");
+    $("#checker").css("margin-top", "-"+$("#article").height()+"px");
+    clearTimeout(typingTimer);
+     typingTimer = setTimeout(doneTyping, doneTypingInterval);
+     
 });
