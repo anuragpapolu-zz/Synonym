@@ -68,7 +68,7 @@ function syno () {
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
 $(document).on("mouseenter", "a.synonyms", function() {
-    $("#checker").find("#"+$(this).parent().attr("id")).css('background','#16a085');
+    $("#checker").find("#"+$(this).parent().attr("id")).css('background','#f1c40f');
 });
 
 $(document).on("mouseleave", "a.synonyms", function() {
