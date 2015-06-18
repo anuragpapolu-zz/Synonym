@@ -68,6 +68,7 @@ function syno () {
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
 $('body').on('hover', 'a.synonyms', function() {
+    alert("S");
     $("#checker").find("#"+$(this).parent().attr("id")).trigger('hover');
 
      
