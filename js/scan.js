@@ -31,7 +31,7 @@ function doneTyping () {
               type: "get",
               success: function(data) {
                   $("#checker #"+id).addClass('checked');
-
+                  console.log("wtf");
               }
             });
             
