@@ -78,6 +78,8 @@ body {
   display: none;
 }
 #checker {
+  pointer-events: none;
+
   visibility: hidden;
   position: relative;
     height: 0!important;
