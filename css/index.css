@@ -80,5 +80,6 @@ body {
 #checker {
   visibility: hidden;
   position: relative;
+    height: 0!important;
 }
 
