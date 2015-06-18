@@ -37,7 +37,9 @@ function doneTyping () {
                   $("#checker #"+id).addClass('checked');
                   $(".accordion").append('<div class="active title">'+text+'</div><div id="'+id+'"class="active content"></div>');
                   $("#results #"+id).append(data[0].words);
-
+                  $('.ui.accordion')
+                    .accordion()
+                  ;
                 }
               }
             });
