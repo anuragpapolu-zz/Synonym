@@ -1,3 +1,3 @@
-$("check").click(function(){
+$(".check").click(function(){
   alert("E");
 });
