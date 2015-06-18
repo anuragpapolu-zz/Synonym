@@ -1,6 +1,7 @@
 var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
 document.getElementById("article").addEventListener("input", function() {
+    $("#checker").css("margin-top", "-"+$("#article").height()+"px").html(content);
     clearTimeout(typingTimer);
      typingTimer = setTimeout(doneTyping, doneTypingInterval);
 }, false);
@@ -21,7 +22,6 @@ function doneTyping () {
       $(this).html(result.join(' '));
     });
     $("#checker").html(content);
-    $("#checker").css("margin-top", "-"+$("#article").height()+"px").html(content);
     $("#checker span").each(function(){
       var id = $(this).attr('id');
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
