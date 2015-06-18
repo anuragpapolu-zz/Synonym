@@ -26,17 +26,11 @@ function doneTyping () {
         if($(this).attr('class')!="checked" && $(this).attr('class')!="none") {
           if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).text().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
             $.ajax({
-              url: "http://api.wordnik.com:80/v4/word.json/"+$(this).text()+"/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=7026726c936e0ea32700d53c3c60294e50e5db2f2dab65fc5",
+              url: "http://api.wordnik.com:80/v4/word.json/"+$(this).text()+"/relatedWords?useCanonical=true&relationshipTypes=synonym&api_key=7026726c936e0ea32700d53c3c60294e50e5db2f2dab65fc5",
               type: "get",
-              data: {
-                type: 0
-              },
+
               success: function(data) {
-                if(data.words.length > 0) {
-                  $(this).addClass('checked');
-                } else {
-                  $(this).addClass('none');
-                }
+                console.log(data.words);
               }
             });
             
