@@ -30,9 +30,9 @@ function doneTyping () {
               type: "get",
               success: function(data) {
                 if(data) {
-                  $(this).addClass('none');
-                } else {
                   $(this).addClass('checked');
+                } else {
+                  $(this).addClass('none');
                 }
               }
             });
