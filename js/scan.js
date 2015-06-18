@@ -35,11 +35,17 @@ function doneTyping () {
               success: function(data) {
                 if(data.length != 0) {
                   $("#checker #"+id).addClass('checked');
-                  $(".accordion").append('<div class="active title">'+text+'</div><div id="'+id+'"class="active content"></div>');
-                  $("#results #"+id).append(data[0].words);
+                  $(".accordion").append('<div class="title">'+text+'</div><div id="'+id+'"class="content ui ordered list"></div>');
+                  for (var i = data[0].words.length - 1; i >= 0; i--) {
+                    $("#results #"+id).append("<a class='item'>"+data[0].words+"</a>");
+                  };
+                  
                   $('.ui.accordion')
                     .accordion()
                   ;
+                  $(".ui.accordion .title:first").addClass('active');
+                  $(".ui.accordion .content:first").addClass('active');
+
                 }
               }
             });
