@@ -22,7 +22,7 @@ function syno () {
     var words = $("#article").html().split(" ");
     $("#mimic").empty();
     $.each(words, function(i, v) {
-        $("#mimic").append($('<span id="'+i+'"').text(v));
+        $("#mimic").append($('<span id="'+i+'">').text(v));
     });
     $("#checker").html(content);
     $('.ui.accordion').html("");
