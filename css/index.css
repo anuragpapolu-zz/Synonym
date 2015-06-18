@@ -2,7 +2,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
-  background: http://subtlepatterns.com/patterns/lightpaperfibers.png;
+  background: url(http://subtlepatterns.com/patterns/lightpaperfibers.png) !important;
 }
 .checked {
     border-bottom: 1px solid #f1c40f; 
