@@ -67,14 +67,16 @@ function syno () {
       clearTimeout(typingTimer);
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
-$('body').on('hover', 'a.synonyms', function() {
-    alert("S");
-    $("#checker").find("#"+$(this).parent().attr("id")).trigger('hover');
-
-     
+$(document).on("mouseenter", "a.synonyms", function() {
+    $("#checker").find("#"+$(this).parent().attr("id")).trigger('mouseenter');
 });
 
-$('body').on('click', 'a.synonyms', function() {
+$(document).on("mouseleave", "a.synonyms", function() {
+    $("#checker").find("#"+$(this).parent().attr("id")).trigger('mouseleave');
+});
+
+
+$(document).on('click', 'a.synonyms', function() {
     $("#checker").find("#"+$(this).parent().attr("id")).text($(this).text());
     $("#trash").html($("#checker").html());
     $("#trash span").each(function() {
