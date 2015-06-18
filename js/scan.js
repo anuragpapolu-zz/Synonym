@@ -24,7 +24,7 @@ function doneTyping () {
     $("#checker span").each(function(){
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
         if($(this).attr('class')!="checked" && $(this).attr('class')!="none") {
-          if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
+          if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
             $.ajax({
               url: "http://api.wordnik.com:80/v4/word.json/"+$(this).text()+"/relatedWords?useCanonical=false&relationshipTypes=synonym&limitPerRelationshipType=10&api_key=7026726c936e0ea32700d53c3c60294e50e5db2f2dab65fc5",
               type: "get",
