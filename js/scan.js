@@ -2,18 +2,22 @@ var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
 
 document.getElementById("article").addEventListener("input", function() {
-  if($("#checker").text()!=$("#article").text()) {
     $("#checker").css("margin-top", "-"+$("#article").height()+"px");
     clearTimeout(typingTimer);
      typingTimer = setTimeout(doneTyping, doneTypingInterval);
-  }
      
 }, false);
 
 var bad_words = ["at", "an","all", "another", "own", "be", "and", "any","from", "there","anybody", "anyone", "anything", "a", "both", "but", "each", "can't", "either", "everybody", "everyone", "everything", "are","few", "for", "he", "her", "herself", "hers", "him", "himself", "his","how", "I", "it", "itself", "its", "it’s", "many", "me", "mine", "more", "most", "much", "myself", "neither", "no one", "nobody", "none", "nothing","nor", "one", "one another","or", "other", "others", "ours", "ourselves", "several", "she", "so", "some", "somebody", "someone", "something", "that", "their",  "theirs", "them", "themselves", "these", "this", "they", "those", "to", "us", "we", "what", "whatever", "when", "which", "whichever", "who", "whoever", "whom", "whomever", "whose", "you", "your", "yours", "yourself", "yourselves", "yet", "back", "in", "the", "of", "our", "ours", "just", "on", "as","one","two","three","four","five","six","seven","eight","with","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety","hundred","thousand","million","billion","trillion","million",",",'"',"!","?"];  
 
 function doneTyping () {
-  
+  if($("#checker").text()!=$("#article").text()) {
+    syno();
+  }
+}
+
+function syno () {
+
     var content = $("#mimic").html();
     $("#mimic").html($("#article").html());
     $('#mimic').each(function(){
@@ -62,7 +66,6 @@ function doneTyping () {
     });
       clearTimeout(typingTimer);
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
-  
 }
 $('body').on('click', 'a.synonyms', function() {
     $("#checker").find("#"+$(this).parent().attr("id")).text($(this).text());
@@ -72,7 +75,8 @@ $('body').on('click', 'a.synonyms', function() {
     });
     $("#article").html($("#trash").html());
     console.log("a");
-    doneTyping();
+    syno();
     console.log("b");
      
 });
+
