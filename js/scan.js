@@ -19,16 +19,11 @@ function doneTyping () {
 function syno () {
 
     var content = $("#mimic").html();
-    $("#mimic").html($("#article").html());
-      var text = $("#mimic").html().split(" "),
-          len = text.length,
-          result = []; 
-
-      for( var i = 0; i < len; i++ ) {
-        result[i] = '<span id="'+i+'">' + text[i] + '</span>';
-      }
-      console.log(result);
-      $("#mimic").html(result.join(" "));
+    var words = $("#article").html().split(" ");
+    $("#mimic").empty();
+    $.each(words, function(i, v) {
+        $("#mimic").append($("<span>").text(v));
+    });
     $("#checker").html(content);
     $('.ui.accordion').html("");
     $("#checker span").each(function(){
