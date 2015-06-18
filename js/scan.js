@@ -67,6 +67,12 @@ function syno () {
       clearTimeout(typingTimer);
        typingTimer = setTimeout(doneTyping, doneTypingInterval);  
 }
+$('body').on('hover', 'a.synonyms', function() {
+    $("#checker").find("#"+$(this).parent().attr("id")).trigger('hover');
+
+     
+});
+
 $('body').on('click', 'a.synonyms', function() {
     $("#checker").find("#"+$(this).parent().attr("id")).text($(this).text());
     $("#trash").html($("#checker").html());

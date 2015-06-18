@@ -12,6 +12,10 @@ body {
     display: inline;
     z-index: -1;
 }
+.checked:hover {
+    border-bottom: 1px solid #16a085; 
+
+}
 #article {
   position: relative;
   z-index: 0;
