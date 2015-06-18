@@ -1,16 +1,16 @@
 (function ($) {
-    $.fn.typing = function () {
-        return this.each(function () {
-            var $this = $(this);
-            var htmlold = $this.html();
-            $this.bind('blur keyup paste copy cut mouseup', function () {
-                var htmlnew = $this.html();
-                if (htmlold !== htmlnew) {
-                    $this.trigger('change')
-                }
-            })
-        })
-    }
+    $('[contenteditable]').on('focus', function() {
+        var $this = $(this);
+        $this.data('before', $this.html());
+        return $this;
+    }).on('blur keyup paste', function() {
+        var $this = $(this);
+        if ($this.data('before') !== $this.html()) {
+            $this.data('before', $this.html());
+            $this.trigger('change');
+        }
+        return $this;
+    });
     var typingTimer;                //timer identifier
     var doneTypingInterval = 500;
     $('#article').typing();
