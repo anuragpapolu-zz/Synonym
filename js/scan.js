@@ -1,6 +1,20 @@
+(function ($) {
+    $.fn.typing = function () {
+        return this.each(function () {
+            var $this = $(this);
+            var htmlold = $this.html();
+            $this.bind('blur keyup paste copy cut mouseup', function () {
+                var htmlnew = $this.html();
+                if (htmlold !== htmlnew) {
+                    $this.trigger('change')
+                }
+            })
+        })
+    }
+})(jQuery);
 var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
-document.getElementById("article").addEventListener("input", function() {
+$('#article').wysiwygEvt(function() {
     $("#checker").css("margin-top", "-"+$("#article").height()+"px");
     clearTimeout(typingTimer);
      typingTimer = setTimeout(doneTyping, doneTypingInterval);
@@ -23,6 +37,7 @@ function doneTyping () {
       $(this).html(result.join(' '));
     });
     $("#checker").html(content);
+    $('.ui.accordion').html("");
     $("#checker span").each(function(){
       var id = $(this).attr('id');
       var text = $(this).text();
