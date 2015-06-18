@@ -2,7 +2,8 @@ var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
 
 document.getElementById("article").addEventListener("input", function() {
-    $("#checker").css("margin-top", "-"+$("#article").height() +"px");
+  var height = parseInt($("#article").height())+ 10;
+    $("#checker").css("margin-top", "-"+height(integer) +"px");
     clearTimeout(typingTimer);
      typingTimer = setTimeout(doneTyping, doneTypingInterval);
      
