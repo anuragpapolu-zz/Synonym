@@ -36,9 +36,9 @@ function doneTyping () {
               success: function(data) {
                 if(data.length != 0) {
                   $("#checker #"+id).addClass('checked');
-                  $(".accordion").append('<div class="title">'+text+'</div><div id="'+id+'"class="content ui list"></div>');
+                  $(".accordion").append('<div class="title">'+text+'</div><div class="content ui list"></div>');
                   for (var i = data[0].words.length - 1; i >= 0; i--) {
-                    $("#results #"+id).append("<a class='item synonyms'>"+data[0].words[i]+"</a>");
+                    $("#results #"+id).append("<a class='item synonyms' id='"+id+"'>"+data[0].words[i]+"</a>");
                   };
                   
                   $('.ui.accordion')
