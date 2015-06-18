@@ -25,6 +25,7 @@ function doneTyping () {
     $("#checker").html(content);
     $("#checker span").each(function(){
       var id = $(this).attr('id');
+      var text = $(this).text();
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
         if($(this).attr('class')!="checked" && $(this).attr('class')!="none") {
           if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).text().replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
@@ -34,8 +35,8 @@ function doneTyping () {
               success: function(data) {
                 if(data.length != 0) {
                   $("#checker #"+id).addClass('checked');
-                  $(".accordion").append('<div class="active title">'+$(this).text()+'</div><div id='+$(this).attr('id')+'class="active content"></div>');
-                  $("#results #"+$(this).attr('id')).append(data[0].words);
+                  $(".accordion").append('<div class="active title">'+text+'</div><div id="'+id+'"class="active content"></div>');
+                  $("#results #"+id).append(data[0].words);
 
                 }
               }
