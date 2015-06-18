@@ -81,5 +81,6 @@ body {
   visibility: hidden;
   position: relative;
     height: 0!important;
+  color: transparent !important;
 }
 
