@@ -1,4 +1,8 @@
 document.getElementById("article").addEventListener("input", function() {
-    $("#mimic").html($(this).html());
-
+    clearTimeout(typingTimer);
+     typingTimer = setTimeout(doneTyping, doneTypingInterval);
 }, false);
+
+function doneTyping () {
+    alert("GO");
+}
