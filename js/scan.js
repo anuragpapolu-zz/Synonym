@@ -30,7 +30,7 @@ function doneTyping () {
               type: "get",
 
               success: function(data) {
-                console.log(data.data);
+                console.log(data[0]);
               }
             });
             
