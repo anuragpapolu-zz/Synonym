@@ -7,9 +7,9 @@ $('body').on('click', 'a.synonyms', function() {
       $(this).contents().unwrap();
     });
     $("#article").html($("#trash").html());
-    $("#checker").css("margin-top", "-"+$("#article").height()+"px");
-    clearTimeout(typingTimer);
-     typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    console.log("a");
+    $("#article").trigger("keypress");
+    console.log("b");
      
 });
 document.getElementById("article").addEventListener("input", function() {
