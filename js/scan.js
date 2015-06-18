@@ -13,7 +13,8 @@
     }
     var typingTimer;                //timer identifier
     var doneTypingInterval = 500;
-    $('#article').typing(function() {
+    $('#article').typing();
+    $('#article').change(function() {
         $("#checker").css("margin-top", "-"+$("#article").height()+"px");
         clearTimeout(typingTimer);
          typingTimer = setTimeout(doneTyping, doneTypingInterval);
