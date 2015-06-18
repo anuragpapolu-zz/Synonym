@@ -23,12 +23,11 @@ function syno () {
       var text = $("#mimic").html().split(" "),
           len = text.length,
           result = []; 
-    $('#mimic').each(function(){
 
+      for( var i = 0; i < len; i++ ) {
         result[i] = '<span id="'+i+'">' + text[i] + '</span>';
-    });
-          $("#mimic").html(result.join(" "));
-
+      }
+      $("#mimic").html(result.join(" "));
     $("#checker").html(content);
     $('.ui.accordion').html("");
     $("#checker span").each(function(){
