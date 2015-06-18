@@ -1,4 +1,4 @@
-var typingTimer;                //timer identifier
+/* var typingTimer;                //timer identifier
 var doneTypingInterval = 500;
 document.getElementById("article").addEventListener("input", function() {
     clearTimeout(typingTimer);
@@ -19,3 +19,4 @@ function doneTyping () {
   });
   $("#checker").html(content);
 }
+*/
