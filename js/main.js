@@ -7,4 +7,5 @@ $('body').on('click', 'a.synonyms', function() {
     	$(this).contents().unwrap();
     });
     $("#article").html($("#trash").html());
+    doneTyping();
 });
