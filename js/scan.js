@@ -6,7 +6,7 @@ document.getElementById("article").addEventListener("input", function() {
 }, false);
 
 function doneTyping () {
-  $("#checker").html($("#mimic").html());
-
-  
+  var content = $("#mimic").html();
+  $("#mimic").html($("#article").html());
+  $("#checker").html(content);
 }
