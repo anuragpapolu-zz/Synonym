@@ -23,9 +23,11 @@ function doneTyping () {
     $("#checker").html(content);
     $("#checker span").each(function(){
       if($("#mimic #"+$(this).attr('id')).text() == $(this).text()) {
-        if($(this).attr('class')!="checked") {
-          if(jQuery.inArray($(this).text(), bad_words) == -1) {
+        if($(this).attr('class')!="checked" && $(this).attr('class')!="none") {
+          if(jQuery.inArray($(this).text(), bad_words) == -1 && isNaN($(this).replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,""))) {
             $(this).addClass('checked');
+          } else {
+            $(this).addClass('none');
           }
         }
       }
