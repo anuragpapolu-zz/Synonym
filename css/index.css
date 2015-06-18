@@ -10,12 +10,11 @@ body {
     position: relative;
 
     display: inline;
-    z-index: 0;
+    z-index: -1;
 }
 #article {
   position: relative;
-  z-index: -1;
-  pointer-events:all;
+  z-index: 0;
 }
 #article:read-write:focus {
      outline: none;
@@ -79,7 +78,6 @@ body {
   display: none;
 }
 #checker {
-  pointer-events: none;
 
   visibility: hidden;
   position: relative;
