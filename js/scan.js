@@ -27,6 +27,7 @@ function syno () {
       for( var i = 0; i < len; i++ ) {
         result[i] = '<span id="'+i+'">' + text[i] + '</span>';
       }
+      console.log(result);
       $("#mimic").html(result.join(" "));
     $("#checker").html(content);
     $('.ui.accordion').html("");
