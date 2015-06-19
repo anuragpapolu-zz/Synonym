@@ -13,7 +13,12 @@ body {
     display: inline;
     z-index: -1;
 }
+.ui.menu .item {
+    font-size: 1.3rem !important;
 
+    line-height: 1.5 !important;
+
+}
 #article {
   position: relative;
   z-index: 0;
