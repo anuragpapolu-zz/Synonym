@@ -2,6 +2,7 @@ body {
   overflow-x: hidden;
   height: 100%;
   width: 100%;
+  background: #eee !important;
 }
 .checked {
     border-bottom: 1px solid #f1c40f; 
